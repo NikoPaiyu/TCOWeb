@@ -1,32 +1,31 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { TCO } from 'src/app/Model/TCO';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalService {
+  public tco;
 
   progressName = 'Information' ;
 
   constructor() { }
 
-  clientObj ;
-
-
   private progressNameSource = new BehaviorSubject('Information');
   progressNameResponse$ = this.progressNameSource.asObservable();
 
-  setProgress(value){
+  getTCO(): TCO {
+    return this.tco;
+    }
+
+    setTCO(tcos: TCO) {
+    this.tco = tcos;
+    }
+
+
+  setProgress(value) {
     this.progressNameSource.next(value);
-  }
-
-
-  setClient(client){
-    this.clientObj = client;
-  }
-
-  getClient(){
-    return this.clientObj;
   }
 
 }

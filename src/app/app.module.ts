@@ -13,7 +13,8 @@ import { TcoLayoutComponent } from './shared/components/tco-layout/tco-layout.co
 import { TcoFooterComponent } from './shared/components/tco-footer/tco-footer.component';
 import { StartComponent } from './components/start/start.component';
 import { LocalService } from './shared/services/local.service';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { TCOService } from './shared/services/tco.service';
 
 @NgModule({
   declarations: [
@@ -27,15 +28,14 @@ import {FormsModule} from '@angular/forms';
     TcoProgressComponent,
     TcoLayoutComponent,
     TcoFooterComponent,
-    StartComponent,
- 
+    StartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    AppRoutingModule
   ],
-  providers: [LocalService],
+  providers: [LocalService, TCOService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

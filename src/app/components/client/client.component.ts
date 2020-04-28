@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { LocalService } from 'src/app/shared/services/local.service';
-import { clientInput } from 'src/app/shared/mode';
+import { TCO } from 'src/app/Model/TCO';
+import { TCOService } from 'src/app/shared/services/tco.service';
+import { ClientInput } from 'src/app/Model/ClientInput';
 
 @Component({
   selector: 'app-client',
@@ -9,18 +11,19 @@ import { clientInput } from 'src/app/shared/mode';
   styleUrls: ['./client.component.scss']
 })
 export class ClientComponent implements OnInit {
+  tco: TCO;
+  clientInput: ClientInput;
 
-  client:clientInput;
-
-  constructor(private route:Router , private local: LocalService) { }
+  constructor(private route: Router , private local: LocalService, private tcoservice: TCOService) { }
 
   ngOnInit() {
-    this.client = new clientInput();
-    console.log(this.client);
+  this.tco = this.tcoservice.getTCO();
+  console.log(this.tco);
+  this.clientInput = this.tco.clientInput;
   }
 
-  goToLogin(){
-    this.local.setClient(this.client);
+  goToLogin() {
+    this.tcoservice.setTCO(this.tco);
     this.local.setProgress('Client');
     this.route.navigateByUrl('home/login');
   }

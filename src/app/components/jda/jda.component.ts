@@ -1,174 +1,177 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalService } from 'src/app/shared/services/local.service';
+import { TCOService } from 'src/app/shared/services/tco.service';
+import { TCO } from 'src/app/Model/TCO';
 
 @Component({
   selector: 'app-jda',
   templateUrl: './jda.component.html',
-  styleUrls: ['./jda.component.scss']
+  styleUrls: ['./jda.component.scss'],
 })
 export class JdaComponent implements OnInit {
+  jdaList = [
+    {
+      // tslint:disable-next-line:max-line-length
+      description: 'Financials',
+    },
+    {
+      description: 'Advanced Collections',
+    },
+    {
+      description: 'Internet Expenses',
+    },
+    {
+      description: 'iReceivables',
+    },
+    {
+      description: 'Treasury',
+    },
+    {
+      description: 'Financials Accounting Hub',
+    },
+    {
+      description: 'Project Costing',
+    },
+    {
+      description: 'Project Resource Management',
+    },
+    {
+      description: 'Project Collaboration',
+    },
+    {
+      description: 'Project Management',
+    },
+    {
+      description: 'Project Portfolio Analysis',
+    },
+    {
+      description: 'Project Contracts',
+    },
+    {
+      description: 'Project Procurement',
+    },
+    {
+      description: 'Discrete Manufacturing',
+    },
+    {
+      description: 'Process Manufacturing',
+    },
+    {
+      description: 'Manufacturing',
+    },
+    {
+      description: 'Operations Center',
+    },
 
-  jdaList = [{
-    // tslint:disable-next-line:max-line-length
-    description: 'Financials'
-  },
     {
-      description: 'Advanced Collections'
+      description: 'Purchasing',
     },
     {
-      description: 'Internet Expenses'
+      description: 'iProcurement',
     },
     {
-      description: 'iReceivables'
+      description: 'Supplier Lifecycle Management',
     },
     {
-      description: 'Treasury'
+      description: 'Outreach',
     },
     {
-      description: 'Financials Accounting Hub'
+      description: 'Activity Management Gateway',
     },
     {
-      description: 'Project Costing'
+      description: 'Application Object Library',
     },
     {
-      description: 'Project Resource Management'
+      description: 'Cost Management',
     },
     {
-      description: 'Project Collaboration'
+      description: 'EDI Gateway',
     },
     {
-      description: 'Project Management'
+      description: 'eMail Center',
     },
     {
-      description: 'Project Portfolio Analysis'
+      description: 'Exchange Market Place Financial Services Accounting Hub',
     },
     {
-      description: 'Project Contracts'
+      description: 'Inventory Management',
     },
     {
-      description: 'Project Procurement'
+      description: 'iSupplier Portal',
     },
     {
-      description: 'Discrete Manufacturing'
+      description: 'Mobile Supply Chain Application',
     },
     {
-      description: 'Process Manufacturing'
+      description: 'Order Entry',
     },
     {
-      description: 'Manufacturing'
+      description: 'Procurement Contracts',
     },
     {
-      description: 'Operations Center'
-    },
-    
-    {
-      description: 'Purchasing'
+      description: 'Oracle Applications System Bundle',
     },
     {
-      description: 'iProcurement'
+      description: 'Oracle Configurator Developer',
     },
     {
-      description: 'Supplier Lifecycle Management'
+      description: 'Oracle Contracts Core',
     },
     {
-      description: 'Outreach'
+      description: 'Oracle Contracts for Sales',
     },
     {
-      description: 'Activity Management Gateway'
+      description: 'Oracle Governance, Risk, & Compliance Manager',
     },
     {
-      description: 'Application Object Library'
+      description: 'Product Lifecycle Management',
     },
     {
-      description: 'Cost Management'
-    },  
-    {
-      description: 'EDI Gateway'
+      description: 'Project Billing',
     },
     {
-      description: 'eMail Center'
+      description: 'Project Bundle',
     },
     {
-      description: 'Exchange Market Place Financial Services Accounting Hub'
+      description: 'Quality',
     },
     {
-      description: 'Inventory Management'
-    },  
-    {
-      description: 'iSupplier Portal'
+      description: 'Self-Service Work Requests',
     },
     {
-      description: 'Mobile Supply Chain Application'
-    },		
-    {
-      description: 'Order Entry'
+      description: 'Service Contracts',
     },
     {
-      description: 'Procurement Contracts'
+      description: 'Service Procurement',
     },
     {
-      description: 'Oracle Applications System Bundle'
+      description: 'Sourcing',
     },
     {
-      description: 'Oracle Configurator Developer'
+      description: 'Warehouse Management',
     },
     {
-      description: 'Oracle Contracts Core'
+      description: 'Workflow Cartridge',
     },
-    {
-      description: 'Oracle Contracts for Sales'
-    },
-    {
-      description: 'Oracle Governance, Risk, & Compliance Manager'
-    },
-    {
-      description: 'Product Lifecycle Management'
-    },
-    {
-      description: 'Project Billing'
-    },
-    {
-      description: 'Project Bundle'
-    },
-    {
-      description: 'Quality'
-    },
-    {
-      description: 'Self-Service Work Requests'
-    },
-    {
-      description: 'Service Contracts'
-    },
-    {
-      description: 'Service Procurement'
-    },
-    {
-      description: 'Sourcing'
-    },
-    {
-      description: 'Warehouse Management'
-    },
-    {
-      description: 'Workflow Cartridge'
-    }		
-    
-  ]; 
+  ];
 
-  constructor(private route:Router,private local:LocalService) { }
+  constructor(private route: Router, private local: LocalService, private tcoservice: TCOService) {}
+  tco: TCO;
 
   ngOnInit() {
+    this.tco = this.tcoservice.getTCO();
   }
 
   goToLogin() {
+    this.tcoservice.setTCO(this.tco);
     this.local.setProgress('Client');
     this.route.navigateByUrl('home/login');
   }
 
   goToOutput() {
+    this.tcoservice.setTCO(this.tco);
     this.local.setProgress('output');
     this.route.navigateByUrl('home/output');
   }
-
-
 }
