@@ -1,11 +1,27 @@
 .start_wrapper {
     margin-top: 50px;
     display: flex;
-    justify-content:center;
-    align-items:center;
     flex-direction: column;
+    
 
-    h4 {
-        color: #fff;
+    .start_action {
+        flex: 1;
+
+        button {
+            width: 50%;
+            height: 500px;
+            background-color:  #007bff;
+            border: 0px;
+            color: #fff;
+        }
     }
+
+
+}
+
+
+
+h4 {
+    color: #fff;
+    margin-top: 50px;
 }
