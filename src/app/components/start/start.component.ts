@@ -19,6 +19,8 @@ export class StartComponent implements OnInit {
     this.route.navigateByUrl('home/client');
   }
 
-  goToShirt(){}
+  goToShirt(){
+    this.route.navigateByUrl('shirt');
+  }
 
 }

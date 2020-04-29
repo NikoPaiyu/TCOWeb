@@ -155,10 +155,9 @@ export class JdaComponent implements OnInit {
     
   ]; 
 
-  constructor(private route:Router,private local:LocalService) { }
+  constructor(private route:Router , private local:LocalService ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   goToLogin() {
     this.local.setProgress('Client');
@@ -166,6 +165,7 @@ export class JdaComponent implements OnInit {
   }
 
   goToOutput() {
+
     this.local.setProgress('output');
     this.route.navigateByUrl('home/output');
   }

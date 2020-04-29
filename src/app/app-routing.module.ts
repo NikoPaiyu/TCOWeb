@@ -6,6 +6,7 @@ import { JdaComponent } from './components/jda/jda.component';
 import { OutputComponent } from './components/output/output.component';
 import { LoginComponent } from './components/login/login.component';
 import { StartComponent } from './components/start/start.component';
+import { ShirtSizeComponent } from './components/shirt-size/shirt-size.component';
 
 
 const routes: Routes = [
@@ -28,11 +29,15 @@ const routes: Routes = [
       {
         path : 'login', 
         component :LoginComponent
-      }
+      },
     ]
   },{
     path : '', 
     component :StartComponent
+  },
+  {
+    path : 'shirt', 
+    component :ShirtSizeComponent
   }
 ];
 

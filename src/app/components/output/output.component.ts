@@ -19,11 +19,27 @@ export class OutputComponent implements OnInit {
     this.local.setProgress('Jda');
   }
 
+  chartOptions = {
+    responsive: true
+  };
+
+  chartData = [
+    { data: [4384000, 4384000, 4384000, 4384000, 4384000], label: 'EBS' },
+    { data: [3272000, 3272000, 1536000, 2661000, 2661000], label: 'Cloud'}
+  ];
+
+  chartLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+
+  onChartClick(event) {
+    console.log(event);
+  }
+
 
   // goToOutput(){
   //   this.route.navigateByUrl('home/output');
   //   this.local.setProgress('output');
   // }
+
 
 
   jdaList = [{

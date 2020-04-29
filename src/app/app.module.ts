@@ -14,6 +14,8 @@ import { TcoFooterComponent } from './shared/components/tco-footer/tco-footer.co
 import { StartComponent } from './components/start/start.component';
 import { LocalService } from './shared/services/local.service';
 import {FormsModule} from '@angular/forms';
+import { ShirtSizeComponent } from './components/shirt-size/shirt-size.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import {FormsModule} from '@angular/forms';
     TcoLayoutComponent,
     TcoFooterComponent,
     StartComponent,
+    ShirtSizeComponent,
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ChartsModule
   ],
   providers: [LocalService],
   bootstrap: [AppComponent]
