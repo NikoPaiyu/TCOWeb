@@ -108,6 +108,33 @@
 
                 </div>
 
+                <div class="tco_card" *ngFor="let ques of questionList">
+
+                    <div class="card_header">
+                        <span>{{ques.description}}</span>
+                    </div>
+
+                    <div class="card_content">
+
+                        <div class="checkbox">
+
+                            <div class="check1">
+                                <input type="checkbox">Licenced
+                                <input type="checkbox">Currently Being Used
+
+                            </div>
+
+                            <div class="check2">
+                                <input type="checkbox"># of FTE'S
+                                <input type="checkbox">Level of Customization
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
             </div>
 
         </div>

@@ -9,3 +9,26 @@
 .tco_card {
     margin-top: 10px;
 }
+
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+
+    .check1 {
+
+        input{
+            margin-right: 10px;
+        }
+
+    }
+
+    .check2 {
+
+        input{
+            margin-right: 10px;
+        }
+
+    }
+
+}
