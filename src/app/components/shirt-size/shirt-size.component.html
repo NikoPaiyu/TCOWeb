@@ -14,19 +14,33 @@
                 <form>
                     <div class="form-group">
                         <label>Product</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        <select class="form-control" [(ngModel)]="this.client.clientName">
+                            <option>Demand Manager</option>
+                            <option>Demand Planner</option>
+                            <option>Supply Chain Planner</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Version</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        <select class="form-control" [(ngModel)]="this.client.clientName">
+                            <option>DP & DM - Version 5.2</option>
+                            <option>SCP - Version 4.2 thru 6.1</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Purpose</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        <select class="form-control" [(ngModel)]="this.client.clientName">
+                            <option>Re-implementation</option>
+                            <option>Transformation</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Lines of Business</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        <select class="form-control" [(ngModel)]="this.client.clientName">
+                            <option>B2B</option>
+                            <option>Retail</option>
+                            <option>Direct</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>SCM Network Reach</label>
@@ -66,15 +80,25 @@
                     </div>
                     <div class="form-group">
                         <label>Global Procurement Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        <select class="form-control" [(ngModel)]="this.client.clientName">
+                            <option>Involmenet of Customs</option>
+                            <option>Govt Autohorities</option>
+                            <option>Shipping Lines</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Partners/Supliers</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        <select class="form-control" [(ngModel)]="this.client.clientName">
+                            <option>NUmbers of Partners</option>
+                            <option>Suppliers</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Partners/Supliers</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        <select class="form-control" [(ngModel)]="this.client.clientName">
+                            <option>Deliver Supply Location -Yes</option>
+                            <option>No</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Customization</label>
