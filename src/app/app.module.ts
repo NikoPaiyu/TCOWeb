@@ -35,9 +35,9 @@ import { ChartsModule } from 'ng2-charts';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    AppRoutingModule
   ],
   providers: [LocalService],
   bootstrap: [AppComponent]

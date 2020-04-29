@@ -1,9 +1,5 @@
 <div class="client-input">
-
-    <div *ngIf="this.clientobj">
-        {{this.clientobj.clientName}}
-    </div>
-
+    <div *ngIf = "this.currentValue">{{this.currentValue.ClientName}}</div>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
@@ -34,7 +30,7 @@
 
                         <div class="form-group">
                             <label>Current On-premise Application</label>
-                            <input class="form-control" value=""  >
+                            <input class="form-control" name="ClientName" [(ngModel)] = "tco.beginPage.ClientName">
                           </div>
 
                           <div class="form-group">
