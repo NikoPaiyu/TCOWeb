@@ -1,27 +1,123 @@
-.start_wrapper {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
+// .start_wrapper {
+//     margin-top: 50px;
+//     display: flex;
+//     flex-direction: column;
     
 
-    .start_action {
-        flex: 1;
+//     .start_action {
+ 
 
-        button {
-            width: 50%;
-            height: 500px;
-            background-color:  #007bff;
-            border: 0px;
+//         button {
+//             width: 100px;
+//             height: 100px;
+//             background:  transparent;
+//             border: 2px solid #007bff;
+         
+//             color: #fff;
+//         }
+//     }
+
+
+// }
+
+
+
+// h4 {
+//     color: #fff;
+//     margin-top: 50px;
+// }
+
+
+
+.offering_wrapper {
+    margin-top: 50px;
+
+    .offering_header {
+        margin-bottom: 30px;
+
+        span {
+            font-size: 30px;
+            font-family: MetricHPE-Medium;
             color: #fff;
         }
     }
 
-
-}
-
+    .offering_content {
 
 
-h4 {
-    color: #fff;
-    margin-top: 50px;
+        .offering_list {
+            display: flex;
+            flex-direction: row;
+
+
+            .offering_list_item {
+                border: 3px solid #007BFF;
+                padding: 30px;
+                color: #fff;
+                width:300px;
+                position: relative;
+                cursor: pointer;
+
+                .offering_list_item_header {
+                    margin-bottom: 10px;
+
+                    .offering_list_item_header_icons {
+                        margin-bottom:20px ;
+                    }
+
+                    .offering_list_item_header_text{
+
+                        span {
+                            font-size: 18px;
+                            font-family: MetricHPE-Semibold;
+                        }
+
+                    }
+
+                }
+
+
+                .offering_list_item_content {
+
+                    p {
+                        font-family: MetricHPE-Light;
+                    }
+                }
+
+                .offering_list_item_action {
+                    position: absolute;
+                    bottom: -35px;
+                    left: 30px;
+
+                    button {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        background-color:  #007BFF;
+                        border: 0px;
+                        background-image:url('../../../assets/icons/arrow.svg');
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: 30px;
+                    }
+
+                }
+
+
+                &:nth-child(2){
+                    margin-left: 10px;
+                }
+
+                &:hover {
+                    background-color:  #007BFF;
+                }
+
+            }
+
+
+
+        }
+
+    }
+
 }
