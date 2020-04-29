@@ -5,30 +5,55 @@ export class ClientInput {
     beginPage: BeginPage = new BeginPage();
 
     TotalAnnualApplicationSupport: string;
-    CurrentOnpremiseApplication: string;
-    CurrentOnpremiseApplicationVersion: string;
+    CurrentOnpremiseApplication = 'WMS';
+    CurrentOnpremiseApplicationVersion = 'R 12.2.4' ;
+    PrimaryLocation = 'Oregen';
+    LevelofCustomizationEstimated = 'Low';
+    TotalNumberofEmployeesFTEs = '780';
+
     CurrentOnpremiseApplicationDetail: string;
-    TotalNumberofFinancialUsers: string;
+    TotalNumberofFinancialUsers = '100';
+    overYear = '0';
+    CorporateMarginalTaxRate = '0';
+    TotalNumberofManagedResources = '0';
+    NumberofCountriesinScope = '8';
+    TotalNumberofInvoiceLineItemsperYear = '$ 1,30,035';
+    TotalNumberofExpenseReportsperYear = '0';
+    TotalAnnualApplicationSupportFeesPayabletoJDA = '$ 7,00,000';
     annualCosttomaintainthephysicalhardware: string;
-    NumberofBusinessFTEs: number;
-    NumberofITorTechnologyDeveloperFTEs: string;
-    NumberofSystemAdminDBAFTEs: string;
-    NumberofConsultantsContractors: string;
-    sporadicallyhireconsultantscontractors: string;
-    TotalconsultantContractorcostperyear: string;
+    NumberofBusinessFTEs = '4';
+    NumberofITorTechnologyDeveloperFTEs = '1';
+    NumberofSystemAdminDBAFTEs = '1';
+    NumberofConsultantsContractors = '11';
+    sporadicallyhireconsultantscontractors = 'Yes';
+    TotalconsultantContractorcostperyear = '$ 7,20,000';
     annualspend: string;
     annualhostingfee: string;
-    NumberofCountriesinScope: string;
-    ApplicationUpgrade1Date: Date;
-    ApplicationUpgrade2Date: Date;
-    Upgrade1Cost: number;
+    UpgradeType = 'Transformation';
+    DurationInWeeks = '12';
+    UpgradePerformedInternallyOrUsed = 'Partner';
+
+    ApplicationUpgrade1Date = '10-Feb-18';
+    ApplicationUpgrade2Date = '';
+    Upgrade1Cost = '$ 1,20,000';
     Upgrade2Cost: number;
+
+    UpgradeType2;
     TotalNumberofPhysicalServers: Int16Array;
     Financials: string;
-    InfrastructureUpgrade1Cost: Int16Array;
+    InfrastructureUpgradeType1: 'Technical';
+    InfrastructureDurationInWeek: 12;
+    Upgradeperformedinternally: 'Partner';
+
+    InfrastructureUpgrade1Cost = '$ 6,00,000';
     InfrastructureUpgrade2Cost: Int32Array;
-    InfrastructureUpgrade1Date: Date;
+    InfrastructureUpgrade1Date = '05-Jan-16';
     InfrastructureUpgrade2Date: Date;
+
+    Licenced = [];
+    CurrentlyBeingUsed = [];
+    ftes = [];
+    LevelofCustomization = [];
 
     public getCurrentOnpremiseApplicationDetail() {
         return concat(this.CurrentOnpremiseApplication, this.Financials);

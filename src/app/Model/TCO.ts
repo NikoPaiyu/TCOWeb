@@ -21,6 +21,6 @@ export class TCO {
     erpTCOReport: ERPTCOReport = new ERPTCOReport();
 
     licenced = [];
-    amount = [0, 0, 0, 0, 0];
+    // amount = [];
 
 }
