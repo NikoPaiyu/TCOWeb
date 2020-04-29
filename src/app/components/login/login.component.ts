@@ -11,20 +11,20 @@ import { TCOService } from 'src/app/shared/services/tco.service';
 })
 export class LoginComponent implements OnInit {
   tco: TCO;
-  constructor(private route: Router, private local: LocalService, private tcoservice: TCOService) {}
+  constructor(private route: Router, private local: LocalService, ) {}
 
   ngOnInit() {
-    this.tco = this.tcoservice.getTCO();
+    // this.tco = this.tcoservice.getTCO();
   }
 
   goToInformation() {
-    this.tcoservice.setTCO(this.tco);
+    // this.tcoservice.setTCO(this.tco);
     this.local.setProgress('Information');
     this.route.navigateByUrl('home/client');
   }
 
   goTojda() {
-    this.tcoservice.setTCO(this.tco);
+    // this.tcoservice.setTCO(this.tco);
     this.local.setProgress('Jda');
     this.route.navigateByUrl('home/jda');
   }

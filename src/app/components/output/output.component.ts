@@ -1,8 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LocalService } from 'src/app/shared/services/local.service';
-import { TCO } from 'src/app/Model/TCO';
-import { TCOService } from 'src/app/shared/services/tco.service';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  Router
+} from '@angular/router';
+import {
+  LocalService
+} from 'src/app/shared/services/local.service';
+import {
+  TCO
+} from 'src/app/Model/TCO';
+import {
+  TCOService
+} from 'src/app/shared/services/tco.service';
 
 @Component({
   selector: 'app-output',
@@ -11,55 +22,46 @@ import { TCOService } from 'src/app/shared/services/tco.service';
 })
 export class OutputComponent implements OnInit {
 
-  constructor(private route:Router , private local:LocalService) { }
+
+  jdaList = [{
+    description: 'Financials'
+  }];
 
   chartOptions = {
     responsive: true
   };
-  ngOnInit() {
-  }
 
-  chartData = [
-    { data: [4384000, 4384000, 4384000, 4384000, 4384000], label: 'EBS' },
-    { data: [3272000, 3272000, 1536000, 2661000, 2661000], label: 'Cloud'}
+  chartData = [{
+      data: [4384000, 4384000, 4384000, 4384000, 4384000],
+      label: 'EBS'
+    },
+    {
+      data: [3272000, 3272000, 1536000, 2661000, 2661000],
+      label: 'Cloud'
+    }
   ];
 
   chartLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
 
+  ngOnInit() {}
 
-  // goToOutput(){
-  //   this.route.navigateByUrl('home/output');
-  //   this.local.setProgress('output');
-  // }
+  constructor(private route: Router, private local: LocalService) {}
 
-
-
-  jdaList = [{
-    // tslint:disable-next-line:max-line-length
-    description: 'Financials'
-  },
-
-
-
-
-  goToClient() {
-    // this.tcoservice.setTCO(this.tco);
-    this.route.navigateByUrl('home/jda');
-    this.local.setProgress('Jda');
+  goToOutput(){
+    this.route.navigateByUrl('home/output');
+    this.local.setProgress('output');
   }
 
 
+    goToClient() {
+      // this.tcoservice.setTCO(this.tco);
+      this.route.navigateByUrl('home/jda');
+      this.local.setProgress('Jda');
+    }
 
- 
 
-  onChartClick(event) {
-    console.log(event);
+    onChartClick(event) {
+      console.log(event);
+    }
+
   }
-
-  // goToOutput(){
-  //   this.route.navigateByUrl('home/output');
-  //   this.local.setProgress('output');
-  // }
-
-
-}
