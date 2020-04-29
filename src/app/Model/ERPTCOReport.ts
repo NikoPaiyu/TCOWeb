@@ -52,13 +52,13 @@ export class ERPTCOReport
     ImplementationCostYearDSCloud = this.erpCurrentSpend.CloudImplementationCostsperyear;
     SoftwareUpgradeCost18MonthsCloud:number;
     HardwareCostYearCloud = this.erpCurrentSpend.EstimatedHardwareCostsincludingHosting;
-    SupportFTEHeadcountCostYearCloud = 702000; //st
-    LegacySupportPerYearDSCloud =  200000; //st
-    CurrentSpendSoftwareSupportPerYear = 	 700000; //st
-    currentSoftwareUpgradeCostPerYer  =  720000; 	//st
-    currentHardwareCostPerYear =  1200000; //st
-    SupportFTEHeadcountCostYear		=  1764000; //st 	
-    TotalCurrentSpendPerYear = 4384000; //st
+    SupportFTEHeadcountCostYearCloud = "$ 7,02,000"; //st
+    LegacySupportPerYearDSCloud =  "$ 2,00,000"; //st
+    CurrentSpendSoftwareSupportPerYear = 	 "$ 7,00,000"; //st
+    currentSoftwareUpgradeCostPerYer  =  "$ 7,20,000"; 	//st
+    currentHardwareCostPerYear =  "$ 12,00,000"; //st
+    SupportFTEHeadcountCostYear		=  "$ 17,64,000"; //st 	
+    TotalCurrentSpendPerYear = "$ 43,84,000"; //st
     IncludedText = "Included";
 
 

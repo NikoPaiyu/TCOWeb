@@ -5,15 +5,15 @@
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-          aria-selected="true">Section A : What You Told Us</a>
+          aria-selected="true">{{tco.jdaInput.SumJDA}} Section A : What You Told Us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-          aria-selected="false">Section - B: DriveStream's Cloud assure Model - What is it</a>
+          aria-selected="false">Section - B: Migration Factory Model's Cloud assure Model - What is it</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-          aria-selected="false">Section-C : Amway's TCO Summary</a>
+          aria-selected="false">Section-C : {{tco.beginPage.clientName}}'s TCO Summary</a>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -30,7 +30,7 @@
             <div class="card_content">
 
               <span>
-                Amway is currently operating its Financial platform on Oracle's EBS Application Suite. Amway operates in
+                {{tco.beginPage.clientName}} is currently operating its Financial platform on Blue Yonder's WMS Application Suite. {{tco.beginPage.clientName}} operates in
                 8 country/countries and has a Financial User population of 100 headquartered in Oregon.
               </span>
 
@@ -48,7 +48,7 @@
             <div class="card_content">
 
               <span>
-                Amway has a team of 17 members supporting the current application. This team consists of 4 Functional
+                {{tco.beginPage.clientName}} has a team of 17 members supporting the current application. This team consists of 4 Functional
                 FTEs, 1 Developer FTEs, 1 System Admin/DBA FTEs and 11 Consultants/Contractors. The estimated annual
                 payroll cost for this team is estimated at $1,764,000!
               </span>
@@ -67,7 +67,7 @@
             <div class="card_content">
 
               <span>
-                Amway has the following EBS modules running on version R 12.2.4 implemented:
+                {{tco.beginPage.clientName}} has the following WMS modules running on version R 12.2.4 implemented:
               </span>
 
             </div>
@@ -85,16 +85,16 @@
               <form>
 
                 <div class="form-group">
-                  <label>Software Licence Cost/Year(Oracle)</label>
+                  <label>Software Licence Cost/Year(Blue Yonder)</label>
                   <input class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Software Support/Per Year</label>
-                  <input class="form-control">
+                  <input class="form-control" name="SoftwareSupport" [(ngModel)] = "tco.erpTCOReport.CurrentSpendSoftwareSupportPerYear">
                 </div>
                 <div class="form-group">
-                  <label>Legacy Software Support/Per Year (Oracle)</label>
+                  <label>Legacy Software Support/Per Year (Blue Yonder)</label>
                   <input class="form-control">
                 </div>
 
@@ -105,17 +105,17 @@
 
                 <div class="form-group">
                   <label>Software Upgrade Cost/18 Months</label>
-                  <input class="form-control">
+                  <input class="form-control" name="softwareUpgradeCost18Months" [(ngModel)] = "tco.erpTCOReport.currentSoftwareUpgradeCostPerYer">
                 </div>
 
                 <div class="form-group">
                   <label>Hardware Cost/Year</label>
-                  <input class="form-control">
+                  <input class="form-control" name="HardwareCostPerYear" [(ngModel)] = "tco.erpTCOReport.currentHardwareCostPerYear">
                 </div>
 
                 <div class="form-group">
                   <label>Support FTE Headcount Cost/Year</label>
-                  <input class="form-control">
+                  <input class="form-control" name="SupportFTEHeadcountCostPerYear" [(ngModel)] = "tco.erpTCOReport.SupportFTEHeadcountCostYear">
                 </div>
 
                 <div class="form-group">
@@ -127,25 +127,25 @@
 
               <div class="form-group">
                 <label>Total</label>
-                <input class="form-control" value="0">
+                <input class="form-control" name="TotalCostPerYear" [(ngModel)] = "tco.erpTCOReport.TotalCurrentSpendPerYear">
               </div>
 
             </div>
 
-
+           
           </div>
 
           <div class="financials_wrapper">
 
             <div class="financials_wrapper">
 
-                <span style="color: #fff">EBS Financials</span>
+                <span style="color: #fff">WMS Financials</span>
     
             </div>
 
               <ul>
 
-                <li *ngFor="let jda of jdaList">
+                <li *ngFor="let jda of jdaList; let i = index;">
 
                   <div class="tco_card">
                     <div class="card_header">
@@ -155,8 +155,10 @@
                     <div class="card_content">
 
                       <div class="card_content_checkbox">
-                        <input type="checkbox">Licened By LatticeSemi
-                        <input type="checkbox">Available on the cloud
+                        <input type="checkbox" id="Licenced{{i}}" 
+                        [(ngModel)]="tco.clientInput.Licenced[i]">Licened By Amway
+                        <input type="checkbox" id="CurrentlyBeingUsed{{i}}"
+                        [(ngModel)]="tco.clientInput.CurrentlyBeingUsed[i]">Currently Being Used
                       </div>
 
                     </div>
@@ -180,7 +182,7 @@
             </div>
 
             <div class="card_content">
-                <span>Amway has performed 2 upgrades since Feb-2018 with an average spend of $120,000. </span>
+                <span>{{tco.beginPage.clientName}} has performed 2 upgrades since Feb-2018 with an average spend of $120,000. </span>
             </div>
 
           </div>
@@ -203,7 +205,7 @@
             </div>
 
             <div class="card_content">
-                <p>Cloud Assure is a unique Drivestream offering which enables clients to migrate their on-premise Oracle application to the Oracle Cloud. This model facilitates this move to the cloud by removing obstacles such as up-front implementation cost, anxiety of maintaining the Cloud Application, maintaining the existing on-premise implementation while moving to the cloud while making sure that all business processes are mapped and ready to be used on the new Oracle Cloud Platform.</p>
+                <p>Cloud Assure is a unique  offering which enables clients to migrate their on-premise Blue Yonder application to the Blue Yonder Cloud. This model facilitates this move to the cloud by removing obstacles such as up-front implementation cost, anxiety of maintaining the Cloud Application, maintaining the existing on-premise implementation while moving to the cloud while making sure that all business processes are mapped and ready to be used on the new Blue Yonder Cloud Platform.</p>
             </div>
 
           </div>
@@ -235,7 +237,7 @@
                     </li>
 
                     <li>
-                        Ongoing Maintenance for existing Oracle on-premise application(s) as well as Oracle Cloud
+                        Ongoing Maintenance for existing Blue Yonder on-premise application(s) as well as Blue Yonder Cloud
                     </li>
 
                 </ul>
@@ -254,11 +256,11 @@
                
    <span>
 
-    1. Assumes Maintenance and Support of current PeopleSoft or EBS system<br>
-2. Strategizes and Recommends a Single or Multi-Phase Migration from On-Premise to the Oracle Cloud<br>
-3. Includes Custom Migration of Current Business Critical Customizations Not Supported by Delivered Functionality by Leveraging Oracle’s Platform as a Service (PaaS)<br>
-4. Includes Post implementation Application Maintenance Services for the Newly Deployed Oracle Cloud Solution
-5. Includes Support for Existing On-Premise Oracle Application(s)<br>
+    1. Assumes Maintenance and Support of current PeopleSoft or WMS system<br>
+2. Strategizes and Recommends a Single or Multi-Phase Migration from On-Premise to the Blue Yonder Cloud<br>
+3. Includes Custom Migration of Current Business Critical Customizations Not Supported by Delivered Functionality by Leveraging Blue Yonder’s Platform as a Service (PaaS)<br>
+4. Includes Post implementation Application Maintenance Services for the Newly Deployed Blue Yonder Cloud Solution
+5. Includes Support for Existing On-Premise Blue Yonder Application(s)<br>
 
    </span>
 
@@ -344,37 +346,37 @@
                     <form>
 
                         <div class="form-group">
-                          <label>Software License Cost/Year (Oracle)</label>
-                          <input class="form-control" value="" placeholder="Enter Something">
+                          <label>Software License Cost/Year (Blue Yonder)</label>
+                          <input class="form-control"  name="softwareLicenseCostPerYear1"  [(ngModel)] = "tco.erpTCOReport.CurrentSpendSoftwareSupportPerYear">
                         </div>
         
                         <div class="form-group">
                           <label>Software Support/Per Year</label>
-                          <input class="form-control" value="" placeholder="Enter Something">
+                          <input class="form-control"  name="SoftwareSupport1" [(ngModel)] = "tco.erpTCOReport.CurrentSpendSoftwareSupportPerYear">
                         </div>
                         <div class="form-group">
-                          <label>Legacy Software Support/Per Year (Oracle)</label>
-                          <input class="form-control"  value="" placeholder="Enter Something">
+                          <label>Legacy Software Support/Per Year (Blue Yonder)</label>
+                          <input class="form-control">
                         </div>
         
                         <div class="form-group">
                           <label>Implementation Cost/Year (DS)</label>
-                          <input class="form-control"  value="" placeholder="Enter Something">
+                          <input class="form-control" >
                         </div>
         
                         <div class="form-group">
                           <label>Software Upgrade Cost/18 Months</label>
-                          <input class="form-control" value="" placeholder="Enter Something">
+                          <input class="form-control" name="softwareUpgradeCost18Months1" [(ngModel)] = "tco.erpTCOReport.currentSoftwareUpgradeCostPerYer">
                         </div>
         
                         <div class="form-group">
                           <label>Hardware Cost/Year</label>
-                          <input class="form-control"  value="" placeholder="Enter Something">
+                          <input class="form-control"   name="HardwareCostPerYear1" [(ngModel)] = "tco.erpTCOReport.currentHardwareCostPerYear">
                         </div>
         
                         <div class="form-group">
                           <label>Support FTE Headcount Cost/Year</label>
-                          <input class="form-control" value="" placeholder="Enter Something">
+                          <input class="form-control" name="SupportFTEHeadcountCostPerYear" [(ngModel)] = "tco.erpTCOReport.SupportFTEHeadcountCostYear">
                         </div>
         
                         <div class="form-group">
@@ -384,7 +386,7 @@
 
                         <div class="form-group">
                             <label>Total</label>
-                            <input class="form-control" value="" placeholder="Enter Something">
+                            <input class="form-control" name="TotalCostPerYear" [(ngModel)] = "tco.erpTCOReport.TotalCurrentSpendPerYear">
                           </div>
         
                       </form>
@@ -392,7 +394,7 @@
                 </div>
     
               </div>
-
+              <!-- Start here -->
               <div class="tco_card">
 
                 <div class="card_header">
@@ -415,7 +417,7 @@
                 </div>
 
               </div>
-
+              <!-- Ends here -->
         </div>        
 
       </div>

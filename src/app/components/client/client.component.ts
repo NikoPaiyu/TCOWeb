@@ -14,16 +14,16 @@ export class ClientComponent implements OnInit {
   tco: TCO;
   clientInput: ClientInput;
 
-  constructor(private route: Router , private local: LocalService) { }
+  constructor(private route: Router , private local: LocalService, private tcoservice: TCOService) { }
 
   ngOnInit() {
-  // this.tco = this.tcoservice.getTCO();
+  this.tco = this.tcoservice.getTCO();
   console.log(this.tco);
-  // this.clientInput = this.tco.clientInput;
+  this.clientInput = this.tco.clientInput;
   }
 
   goToLogin() {
-    // this.tcoservice.setTCO(this.tco);
+    this.tcoservice.setTCO(this.tco);
     this.local.setProgress('Client');
     this.route.navigateByUrl('home/login');
   }

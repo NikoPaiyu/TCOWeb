@@ -73,7 +73,7 @@ export class ERPCurrentSpend{
     
     //TotalAnnualCostSavingsperyearfirst3years = this.TotalCurrentPeopleSoftEBSAnnualSpend - this.TotalProjectedAnnualSpendPeryear
     
-    FunctionalFTesCal = this.clientInput.NumberofBusinessFTEs * this.FunctionalFTEs
+   // FunctionalFTesCal = this.clientInput.NumberofBusinessFTEs * this.FunctionalFTEs
     DeveloperFTesCal = this.DeveloperFTes * this.NumberofITorTechnologyDeveloperFTEs
  
   //  TotalCurrentPeopleSoftEBSAnnualSpend = this.CustomerPeopleSoftEBSMaintenanceTeamCosts + this.PeopleSoftEBSHardwareCosts + this.TotalPeopleSoftOrEBSSupportFee + this.PeopleSoftEBSUpgradeCostsperyear

@@ -10,58 +10,58 @@ import { TCOService } from 'src/app/shared/services/tco.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private route: Router, private local: LocalService, ) {}
   tco: TCO;
+  constructor(private route: Router, private local: LocalService, private tcoservice: TCOService) {}
 
   questionList = [{
     title: 'Short Term Revenue',
     // tslint:disable-next-line:max-line-length
-    description: 'Financials'
+    description: 'Receiving of orders'
   },
     {
-      description: 'Advanced Collections'
+      description: 'Multiple types of receipt orders'
     },
     {
-      description: 'Internet Expenses'
+      description: 'Specialty receipt support'
     },
     {
-      description: 'iReceivables'
+      description: 'Allow/restrict partial case receipts'
     },
     {
-      description: 'Treasury'
+      description: 'Reverse and voiding of receipts'
     },
     {
-      description: 'Financials Accounting Hub'
+      description: 'Appointment scheduling'
     },
     {
-      description: 'Project Costing'
+      description: 'Dock scheduling'
     },
     {
-      description: 'Project Resource Management'
+      description: 'Cross-docking'
     },
     {
-      description: 'Project Collaboration'
+      description: 'Yard management'
     },
     {
-      description: 'Project Management'
+      description: 'Directed put-away'
     },
     {
-      description: 'Project Portfolio Analysis'
+      description: 'Returns management'
     },
     {
-      description: 'Project Contracts'
+      description: 'Vendor data tracking'
     },
     {
-      description: 'Project Procurement'
+      description: 'Label verification'
     },
     {
-      description: 'Discrete Manufacturing'
+      description: 'Label generation'
     },
     {
-      description: 'Process Manufacturing'
+      description: 'Palletize LPNs on receipt'
     },
     {
-      description: 'Manufacturing'
+      description: 'Mobile scanner and app/smartphone support'
     },
     {
       description: 'Operations Center'
@@ -113,19 +113,19 @@ export class LoginComponent implements OnInit {
       description: 'Procurement Contracts'
     },
     {
-      description: 'Oracle Applications System Bundle'
+      description: 'Blue Yonder Applications System Bundle'
     },
     {
-      description: 'Oracle Configurator Developer'
+      description: 'Blue Yonder Configurator Developer'
     },
     {
-      description: 'Oracle Contracts Core'
+      description: 'Blue Yonder Contracts Core'
     },
     {
-      description: 'Oracle Contracts for Sales'
+      description: 'Blue Yonder Contracts for Sales'
     },
     {
-      description: 'Oracle Governance, Risk, & Compliance Manager'
+      description: 'Blue Yonder Governance, Risk, & Compliance Manager'
     },
     {
       description: 'Product Lifecycle Management'
@@ -158,19 +158,18 @@ export class LoginComponent implements OnInit {
       description: 'Workflow Cartridge'
     }		
   ]; 
-
   ngOnInit() {
-    // this.tco = this.tcoservice.getTCO();
+    this.tco = this.tcoservice.getTCO();
   }
 
   goToInformation() {
-    // this.tcoservice.setTCO(this.tco);
+    this.tcoservice.setTCO(this.tco);
     this.local.setProgress('Information');
     this.route.navigateByUrl('home/client');
   }
 
   goTojda() {
-    // this.tcoservice.setTCO(this.tco);
+    this.tcoservice.setTCO(this.tco);
     this.local.setProgress('Jda');
     this.route.navigateByUrl('home/jda');
   }

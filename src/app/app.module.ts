@@ -13,9 +13,10 @@ import { TcoLayoutComponent } from './shared/components/tco-layout/tco-layout.co
 import { TcoFooterComponent } from './shared/components/tco-footer/tco-footer.component';
 import { StartComponent } from './components/start/start.component';
 import { LocalService } from './shared/services/local.service';
-import {FormsModule} from '@angular/forms';
-import { ShirtSizeComponent } from './components/shirt-size/shirt-size.component';
+import { FormsModule } from '@angular/forms';
+import { TCOService } from './shared/services/tco.service';
 import { ChartsModule } from 'ng2-charts';
+import { ShirtSizeComponent } from './components/shirt-size/shirt-size.component';
 
 @NgModule({
   declarations: [
@@ -29,17 +30,16 @@ import { ChartsModule } from 'ng2-charts';
     TcoProgressComponent,
     TcoLayoutComponent,
     TcoFooterComponent,
-    StartComponent,
     ShirtSizeComponent,
- 
+    StartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ChartsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
-  providers: [LocalService],
+  providers: [LocalService, TCOService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
