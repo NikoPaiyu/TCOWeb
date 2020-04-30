@@ -269,76 +269,7 @@
           </div>
         </div>
 
-        <div class="tco_card" *ngFor="let ques of questionList; let j = index;">
-          <div class="card_header">
-            <span>{{ ques.description }}</span>
-          </div>
 
-          <div class="card_content">
-            <div class="checkbox">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="Licenced{{j}}"
-                        [(ngModel)]="tco.clientInput.Licenced[j]"
-                      />
-                      <label class="form-check-label" for="Licenced{{j}}"
-                        >Licenced</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-sm">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="CurrentlyBeingUsed{{j}}"
-                        [(ngModel)]="tco.clientInput.CurrentlyBeingUsed[j]"
-                      />
-                      <label class="form-check-label" for="CurrentlyBeingUsed{{j}}"
-                        >Currently Being Used</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="ftes{{j}}"
-                        [(ngModel)]="tco.clientInput.ftes[j]"
-                      />
-                      <label class="form-check-label" for="ftes{{j}}"
-                        ># of FTE'S</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-sm">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="LevelofCustomization{{j}}"
-                        [(ngModel)]="tco.clientInput.LevelofCustomization[j]"
-                      />
-                      <label class="form-check-label" for="LevelofCustomization{{j}}"
-                        >Level of Customization</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
