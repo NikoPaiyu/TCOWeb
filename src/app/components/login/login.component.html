@@ -57,7 +57,7 @@
       <div class="section_a">
         <div class="tco_card">
           <div class="card_header">
-            <span>Amway Background WMS Details </span>
+            <span>{{tco.beginPage.clientName}} Background WMS Details </span>
           </div>
 
           <div class="card_content">
@@ -81,20 +81,92 @@
 
             <div class="form-group">
               <label>Level of Customization(Estimated) </label>
-              <input
+              <select class="form-control" name="GlobalProcurementComplexity" [(ngModel)]="tco.clientInput.LevelofCustomizationEstimated">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+              <!-- <input
                 class="form-control"
                 name="LevelofCustomizationEstimated"
                 [(ngModel)]="tco.clientInput.LevelofCustomizationEstimated"
-              />
+              /> -->
             </div>
 
             <div class="form-group">
-              <label>Amway's Primary Location (HQ State)</label>
-              <input
+              <label>{{tco.beginPage.ClientName}}'s Primary Location (HQ State)</label>
+              <select class="form-control" name="PrimaryLocation" [(ngModel)]="tco.clientInput.PrimaryLocation">
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Delaware</option>
+                <option>District of Columbia</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Hawaii</option>
+                <option>Idaho</option>
+                <option>Illinois</option>
+                <option>Indiana</option>
+                <option>Iowa</option>
+                <option>Kansas</option>
+                <option>Kentucky</option>
+                <option>Louisiana</option>
+                <option>Maine</option>
+                <option>Maryland</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option>Mississippi</option>
+                <option>Missouri</option>
+                <option>Montana</option>
+                <option>Nebraska</option>
+                <option>Nevada</option>
+                <option>New Hampshire</option>
+                <option>New Jersey</option>
+                <option>New York</option>
+                <option>North Carolina</option>
+                <option>North Dakota</option>
+                <option>Ohio</option>
+                <option>Oklahoma</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Puerto Rico</option>
+                <option>Rhode Island</option>
+                <option>South Carolina</option>
+                <option>South Dakota</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Puerto Rico</option>
+                <option>Utah</option>
+                <option>Vermont</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+                <option>West Virginia</option>
+                <option>Wisconsin</option>
+                <option>Wyoming</option>
+                <option>Ontario</option>
+                <option>Quebec</option>
+                <option>Nova Scotia</option>
+                <option>New Brunswick</option>
+                <option>Manitoba</option>
+               <option>British Columbia</option>
+                <option>Prince Edward Island</option>
+                <option>Saskatchewan</option>
+                <option>Alberta</option>
+                <option>Newfoundland & Labrador</option>
+                <option>Northwest Territories</option>
+               <option>Yukon/option>
+                <option>Nunavut</option>
+            </select>
+              <!-- <input
                 class="form-control"
                 name="PrimaryLocationHQState"
                 [(ngModel)]="tco.clientInput.PrimaryLocation"
-              />
+              /> -->
             </div>
 
             <div class="form-group">
@@ -107,7 +179,7 @@
             </div>
 
             <div class="form-group">
-              <label>Total Number of Financial Users (FTEs)</label>
+              <label>Total Number of WMS Users (FTEs)</label>
               <input
                 class="form-control"
                 name="TotalNumberofFinancialUsers "
@@ -162,7 +234,7 @@
             </div>
 
             <div class="form-group">
-              <label>Total Number of Invoice Line Items per Year </label>
+              <label>Total Number of Order Line Items per Year </label>
               <input
                 class="form-control"
                 name="TotalNumberofInvoiceLineItemsperYear "
@@ -172,14 +244,14 @@
               />
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label>Total Number of Expense Reports per Year </label>
               <input
                 class="form-control"
                 name="TotalNumberofExpenseReportsperYear "
                 [(ngModel)]="tco.clientInput.TotalNumberofExpenseReportsperYear"
               />
-            </div>
+            </div> -->
 
             <div class="form-group">
               <label

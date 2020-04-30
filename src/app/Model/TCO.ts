@@ -7,6 +7,7 @@ import {ERPTCOOutput } from './ERPTCOOutput';
 import {JDAInput} from './JDAInput';
 import {LocationData} from './LocationData';
 import { ERPTCOReport } from './ERPTCOReport';
+import { TShirtSizing } from './TShirtSizing';
 
 export class TCO {
     analysis: Analysis = new Analysis();
@@ -17,7 +18,7 @@ export class TCO {
     erpTCOOutput: ERPTCOOutput = new ERPTCOOutput();
     jdaInput: JDAInput = new JDAInput();
     locationData: LocationData = new LocationData();
-
+    tShirtSizing: TShirtSizing = new TShirtSizing();
     erpTCOReport: ERPTCOReport = new ERPTCOReport();
 
     licenced = [];

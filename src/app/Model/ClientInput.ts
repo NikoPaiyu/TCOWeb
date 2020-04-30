@@ -6,7 +6,7 @@ export class ClientInput {
 
     TotalAnnualApplicationSupport: string;
     CurrentOnpremiseApplication = 'WMS';
-    CurrentOnpremiseApplicationVersion = 'R 12.2.4' ;
+    CurrentOnpremiseApplicationVersion = '2018.1' ;
     PrimaryLocation = 'Oregen';
     LevelofCustomizationEstimated = 'Low';
     TotalNumberofEmployeesFTEs = '780';

@@ -12,114 +12,119 @@
                 <div class="card_content">
     
                     <form>
-                        <div class="form-group">
-                            <label>Product</label>
-                            <select class="form-control" [(ngModel)]="this.client.clientName">
-                                <option>Demand Manager</option>
-                                <option>Demand Planner</option>
-                                <option>Supply Chain Planner</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Version</label>
-                            <select class="form-control" [(ngModel)]="this.client.clientName">
-                                <option>DP & DM - Version 5.2</option>
-                                <option>SCP - Version 4.2 thru 6.1</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Purpose</label>
-                            <select class="form-control" [(ngModel)]="this.client.clientName">
-                                <option>Re-implementation</option>
-                                <option>Transformation</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Lines of Business</label>
-                            <select class="form-control" [(ngModel)]="this.client.clientName">
-                                <option>B2B</option>
-                                <option>Retail</option>
-                                <option>Direct</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>SCM Network Reach</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Product Hierarchy Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Product Hierarchy Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Product Hierarchy Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Network Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Network Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Network Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Network Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Network Complexity</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Global Procurement Complexity</label>
-                            <select class="form-control" [(ngModel)]="this.client.clientName">
-                                <option>Involmenet of Customs</option>
-                                <option>Govt Autohorities</option>
-                                <option>Shipping Lines</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Partners/Supliers</label>
-                            <select class="form-control" [(ngModel)]="this.client.clientName">
-                                <option>NUmbers of Partners</option>
-                                <option>Suppliers</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Partners/Supliers</label>
-                            <select class="form-control" [(ngModel)]="this.client.clientName">
-                                <option>Deliver Supply Location -Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Customization</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Customization</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Interfaces</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <label>Interfaces</label>
-                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                        </div>
-                        <div class="form-group">
-                            <button class="but but-primary">Submit</button>
-                        </div>
-                    </form>
+                    <div class="form-group">
+                        <label>Product</label>
+                        <select class="form-control" name="Product" [(ngModel)]="tco.tShirtSizing.Product">
+                            <option>Demand Manager</option>
+                            <option>Demand Planner</option>
+                            <option>Supply Chain Planner</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Version</label>
+                        <select class="form-control" name="Version" [(ngModel)]="tco.tShirtSizing.Version">
+                            <option>DP & DM - Version 5.2</option>
+                            <option>SCP - Version 4.2 thru 6.1</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Purpose</label>
+                        <select class="form-control" name="Purpose" [(ngModel)]="tco.tShirtSizing.Purpose">
+                            <option>Re-implementation</option>
+                            <option>Transformation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Lines of Business</label>
+                        <select class="form-control" name="LinesofBusiness" [(ngModel)]="tco.tShirtSizing.LinesofBusiness">
+                            <option>B2B</option>
+                            <option>Retail</option>
+                            <option>Direct</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>SCM Network Reach</label>
+                        <select class="form-control"  name="SCMNetworkReach" [(ngModel)]="tco.tShirtSizing.SCMNetworkReach">
+                            <option>Local</option>
+                            <option>Country</option>
+                            <option>Regional</option>
+                            <option>Global</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Hierarchy Complexity - Number of Product Hierarchy</label>
+                        <input class="form-control" type="number" name="ProductHierarchyComplexity1" [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity1">
+                    </div>
+                    <div class="form-group">
+                        <label>Product Hierarchy Complexity - Product Hierarchy Level</label>
+                        <input class="form-control" type="number" name="ProductHierarchyComplexity2" [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity2">
+                    </div>
+                    <div class="form-group">
+                        <label>Product Hierarchy Complexity</label>
+                        <input class="form-control" type="number" name="ProductHierarchyComplexity3" [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity3">
+                    </div>
+                    <div class="form-group">
+                        <label>Network Complexity</label>
+                        <input class="form-control" type="number" name="NetworkComplexity1" [(ngModel)]="tco.tShirtSizing.NetworkComplexity1">
+                    </div>
+                    <div class="form-group">
+                        <label>Network Complexity</label>
+                        <input class="form-control" type="number" name="NetworkComplexity2" [(ngModel)]="tco.tShirtSizing.NetworkComplexity2">
+                    </div>
+                    <div class="form-group">
+                        <label>Network Complexity</label>
+                        <input class="form-control" type="number" name="NetworkComplexity3" [(ngModel)]="tco.tShirtSizing.NetworkComplexity3">
+                    </div>
+                    <div class="form-group">
+                        <label>Network Complexity</label>
+                        <input class="form-control" type="number" name="NetworkComplexity4" [(ngModel)]="tco.tShirtSizing.NetworkComplexity4">
+                    </div>
+                    <div class="form-group">
+                        <label>Network Complexity</label>
+                        <input class="form-control" type="number" name="NetworkComplexity5" [(ngModel)]="tco.tShirtSizing.NetworkComplexity5">
+                    </div>
+                    <div class="form-group">
+                        <label>Global Procurement Complexity</label>
+                        <select class="form-control" name="GlobalProcurementComplexity" [(ngModel)]="tco.tShirtSizing.GlobalProcurementComplexity">
+                            <option>Simple</option>
+                            <option>Medium</option>
+                            <option>Complex</option>
+                            <option>Very Complex</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Partners/ Suppliers</label>
+                        <input class="form-control" name = "PartnersSuppliers1" type="number" name="client" [(ngModel)]="tco.tShirtSizing.PartnersSuppliers1">
+                    </div>
+                    <div class="form-group">
+                        <label>Deliver Supply Location</label>
+                        <select class="form-control" name="PartnersSuppliers2" [(ngModel)]="tco.tShirtSizing.PartnersSuppliers2">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Customization - Approx Number of Product Mods</label>
+                        <input class="form-control" name="Customization1" type="number" name="client" [(ngModel)]="tco.tShirtSizing.Customization1">
+                    </div>
+                    <div class="form-group">
+                        <label>Customization - Approx Number of Custom Logic</label>
+                        <input class="form-control" type="number" name="Customization2" [(ngModel)]="tco.tShirtSizing.Customization2">
+                    </div>
+                    <div class="form-group">
+                        <label>Interfaces - Number of Standard Interfaces integration (comes OOB)</label>
+                        <input class="form-control" type="number" name="Interfaces1" [(ngModel)]="tco.tShirtSizing.Interfaces1">
+                    </div>
+                    <div class="form-group">
+                        <label>Interfaces - Number of Non-Standard Interfaces integration (custom)</label>
+                        <input class="form-control" type="number" name="Interfaces2" [(ngModel)]="tco.tShirtSizing.Interfaces2">
+                    </div>
+                    <div class="form-group">
+                        <button class="but but-primary" (click)="calculateShirtSizing()">Submit</button>
+                       
+                      {{tco.tShirtSizing.Total}} {{tco.tShirtSizing.CurrentType}} {{tco.tShirtSizing.DurationOfImplementation}}
+                    </div>
+                </form>
     
                 </div>
     
