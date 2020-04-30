@@ -29,3 +29,18 @@
 
 
 }
+
+
+.output_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+
+    .output_list_item {
+        flex: 200px;
+
+
+    }
+
+}
+
