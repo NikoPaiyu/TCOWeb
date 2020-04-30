@@ -26,7 +26,7 @@ export class ShirtSizeComponent implements OnInit {
 
   calculateShirtSizing()
   {
-  
+    this.total  = 0;
 
     if (this.tco.tShirtSizing.Product = 'Demand Manager')
     {
@@ -41,22 +41,32 @@ this.total = this.total + 20;
       this.total = this.total + 30;
     }
 
-    if (this.tco.tShirtSizing.Version = 'DP & DM - Version 5.2')
+    if (this.tco.tShirtSizing.Version = 'n - 1')
     {
-      this.total = this.total + 25;
+      this.total = this.total + 15;
     }
-    else  if (this.tco.tShirtSizing.Version = 'SCP - Version 4.2 thru 6.1')
+    else  if (this.tco.tShirtSizing.Version = 'n - 2')
     {
       this.total = this.total + 20;
     }
 
-   if (this.tco.tShirtSizing.Purpose = 'Re-implementation')
+    else  if (this.tco.tShirtSizing.Version = 'n - 3')
+    {
+      this.total = this.total + 25;
+    }
+
+    else  if (this.tco.tShirtSizing.Version = 'n - 4')
+    {
+      this.total = this.total + 30;
+    }
+
+   if (this.tco.tShirtSizing.Purpose = 'Implementation')
     {
       this.total = this.total + 20;
     }
     else  if (this.tco.tShirtSizing.Purpose = 'Transformation')
     {
-      this.total = this.total + 9;
+      this.total = this.total + 15;
     }
 
     if (this.tco.tShirtSizing.LinesofBusiness = 'B2B')
@@ -73,11 +83,12 @@ this.total = this.total + 20;
     }
 
 
- if (this.tco.tShirtSizing.SCMNetworkReach = 'Local')
-    {
-      this.total = this.total + 10;
-    }
-    else  if (this.tco.tShirtSizing.SCMNetworkReach = 'Country')
+//  if (this.tco.tShirtSizing.SCMNetworkReach = 'Local')
+//     {
+//       this.total = this.total + 10;
+//     }
+//     else
+  if (this.tco.tShirtSizing.SCMNetworkReach = 'Country')
     {
       this.total = this.total + 15;
     }
@@ -208,22 +219,22 @@ else
   this.total = this.total + 18;
 }
 
- if (this.tco.tShirtSizing.GlobalProcurementComplexity = 'Simple')
-    {
-      this.total = this.total + 6;
-    }
-    else  if (this.tco.tShirtSizing.GlobalProcurementComplexity = 'Medium')
-    {
-      this.total = this.total + 9;
-    }
-    else  if (this.tco.tShirtSizing.GlobalProcurementComplexity = 'Complex')
-    {
-      this.total = this.total + 12;
-    }
-   else
-{
-  this.total = this.total + 15;
-}
+//  if (this.tco.tShirtSizing.GlobalProcurementComplexity = 'Simple')
+//     {
+//       this.total = this.total + 6;
+//     }
+//     else  if (this.tco.tShirtSizing.GlobalProcurementComplexity = 'Medium')
+//     {
+//       this.total = this.total + 9;
+//     }
+//     else  if (this.tco.tShirtSizing.GlobalProcurementComplexity = 'Complex')
+//     {
+//       this.total = this.total + 12;
+//     }
+//    else
+// {
+//   this.total = this.total + 15;
+// }
 
  if (this.tco.tShirtSizing.PartnersSuppliers1 >0 && this.tco.tShirtSizing.PartnersSuppliers1 <= 3000)
     {
@@ -244,37 +255,37 @@ else
 
  if (this.tco.tShirtSizing.Customization1 =0)
     {
-	
+  
     }
     else  if (this.tco.tShirtSizing.Customization1 =1)
     {
-      this.total = this.total + 15;
+      this.total = this.total + 5;
     }
     else  if (this.tco.tShirtSizing.Customization1 =2)
     {
-      this.total = this.total + 20;
+      this.total = this.total + 10;
     }
    else
 {
-  this.total = this.total + 25;
+  this.total = this.total + 15;
 }
 
 
 if (this.tco.tShirtSizing.Customization2 >0 && this.tco.tShirtSizing.Customization2 <= 5)
     {
-      this.total = this.total + 20;
+      this.total = this.total + 10;
     }
     else  if (this.tco.tShirtSizing.Customization2 > 6  && this.tco.tShirtSizing.Customization2 <= 10)
     {
-      this.total = this.total + 25;
+      this.total = this.total + 15;
     }
     else  if (this.tco.tShirtSizing.Customization2 > 11 && this.tco.tShirtSizing.Customization2 <= 20)
     {
-      this.total = this.total + 30;
+      this.total = this.total + 25;
     }
    else
 {
-  this.total = this.total + 35;
+  this.total = this.total + 30;
 }
 
 
@@ -298,40 +309,40 @@ if (this.tco.tShirtSizing.Interfaces1 >0 && this.tco.tShirtSizing.Interfaces1 <=
 
 if (this.tco.tShirtSizing.Interfaces2 >0 && this.tco.tShirtSizing.Interfaces2 <= 0)
     {
-	
+  
     }
     else  if (this.tco.tShirtSizing.Interfaces2 > 1  && this.tco.tShirtSizing.Interfaces2 <= 3)
     {
-      this.total = this.total + 5;
+      this.total = this.total + 10;
     }
     else  if (this.tco.tShirtSizing.Interfaces2 > 4 && this.tco.tShirtSizing.Interfaces2 <= 6)
     {
-      this.total = this.total + 10;
+      this.total = this.total + 15;
     }
    else
 {
-  this.total = this.total + 15;
+  this.total = this.total + 20;
 }
 
 this.tco.tShirtSizing.Total = this.total;
 
-if (this.total < 150)
+if (this.total <= 150)
 {
   this.tco.tShirtSizing.CurrentType = 'Small';
   this.tco.tShirtSizing.DurationOfImplementation= 'upto 3 months'
 }
-else if (this.total > 151 && this.total < 200)
+else if (this.total > 151 && this.total <= 200)
 {
   this.tco.tShirtSizing.CurrentType = 'Medium';
   this.tco.tShirtSizing.DurationOfImplementation= '4 - 6 months'
 }
-else if (this.total> 201 && this.total < 250)
+else if (this.total>= 201 && this.total <= 250)
 {
   this.tco.tShirtSizing.CurrentType = 'Large';
   this.tco.tShirtSizing.DurationOfImplementation= '7 - 9 months';
 }
 
-else if (this.total> 251)
+else if (this.total>= 251)
 {
   this.tco.tShirtSizing.CurrentType = 'Extra Large'
   this.tco.tShirtSizing.DurationOfImplementation= '9 - 12 months'
