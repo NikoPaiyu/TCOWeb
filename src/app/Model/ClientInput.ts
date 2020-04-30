@@ -19,14 +19,14 @@ export class ClientInput {
     NumberofCountriesinScope = '8';
     TotalNumberofInvoiceLineItemsperYear = '$ 1,30,035';
     TotalNumberofExpenseReportsperYear = '0';
-    TotalAnnualApplicationSupportFeesPayabletoJDA = '$ 7,00,000';
+    TotalAnnualApplicationSupportFeesPayabletoJDA = '$ 1,00,000';
     annualCosttomaintainthephysicalhardware: string;
     NumberofBusinessFTEs = '4';
     NumberofITorTechnologyDeveloperFTEs = '1';
     NumberofSystemAdminDBAFTEs = '1';
     NumberofConsultantsContractors = '11';
     sporadicallyhireconsultantscontractors = 'Yes';
-    TotalconsultantContractorcostperyear = '$ 7,20,000';
+    TotalconsultantContractorcostperyear = '$ 1,20,000';
     annualspend: string;
     annualhostingfee: string;
     UpgradeType = 'Transformation';
