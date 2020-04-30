@@ -1,263 +1,416 @@
 <div class="container-fluid">
-    <div class="shirt_wrapper">
-
-        <div class="shirt_size_form" style="margin-right: 10px;">
-            <div class="tco_card">
-
-                <div class="card_header">
-                    <span>T-Shirt Sizing Model</span>
-                </div>
-    
-    
-                <div class="card_content">
-    
-                    <form>
-                    <div class="form-group">
-                        <label>Product</label>
-                        <select class="form-control" name="Product" [(ngModel)]="tco.tShirtSizing.Product">
-                            <option>Demand Manager</option>
-                            <option>Demand Planner</option>
-                            <option>Supply Chain Planner</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Version</label>
-                        <select class="form-control" name="Version" [(ngModel)]="tco.tShirtSizing.Version">
-                            <option>DP & DM - Version 5.2</option>
-                            <option>SCP - Version 4.2 thru 6.1</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Purpose</label>
-                        <select class="form-control" name="Purpose" [(ngModel)]="tco.tShirtSizing.Purpose">
-                            <option>Re-implementation</option>
-                            <option>Transformation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Lines of Business</label>
-                        <select class="form-control" name="LinesofBusiness" [(ngModel)]="tco.tShirtSizing.LinesofBusiness">
-                            <option>B2B</option>
-                            <option>Retail</option>
-                            <option>Direct</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>SCM Network Reach</label>
-                        <select class="form-control"  name="SCMNetworkReach" [(ngModel)]="tco.tShirtSizing.SCMNetworkReach">
-                            <option>Local</option>
-                            <option>Country</option>
-                            <option>Regional</option>
-                            <option>Global</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Product Hierarchy Complexity - Number of Product Hierarchy</label>
-                        <input class="form-control" type="number" name="ProductHierarchyComplexity1" [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity1">
-                    </div>
-                    <div class="form-group">
-                        <label>Product Hierarchy Complexity - Product Hierarchy Level</label>
-                        <input class="form-control" type="number" name="ProductHierarchyComplexity2" [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity2">
-                    </div>
-                    <div class="form-group">
-                        <label>Product Hierarchy Complexity</label>
-                        <input class="form-control" type="number" name="ProductHierarchyComplexity3" [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity3">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="number" name="NetworkComplexity1" [(ngModel)]="tco.tShirtSizing.NetworkComplexity1">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="number" name="NetworkComplexity2" [(ngModel)]="tco.tShirtSizing.NetworkComplexity2">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="number" name="NetworkComplexity3" [(ngModel)]="tco.tShirtSizing.NetworkComplexity3">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="number" name="NetworkComplexity4" [(ngModel)]="tco.tShirtSizing.NetworkComplexity4">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="number" name="NetworkComplexity5" [(ngModel)]="tco.tShirtSizing.NetworkComplexity5">
-                    </div>
-                    <div class="form-group">
-                        <label>Global Procurement Complexity</label>
-                        <select class="form-control" name="GlobalProcurementComplexity" [(ngModel)]="tco.tShirtSizing.GlobalProcurementComplexity">
-                            <option>Simple</option>
-                            <option>Medium</option>
-                            <option>Complex</option>
-                            <option>Very Complex</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Number of Partners/ Suppliers</label>
-                        <input class="form-control" name = "PartnersSuppliers1" type="number" name="client" [(ngModel)]="tco.tShirtSizing.PartnersSuppliers1">
-                    </div>
-                    <div class="form-group">
-                        <label>Deliver Supply Location</label>
-                        <select class="form-control" name="PartnersSuppliers2" [(ngModel)]="tco.tShirtSizing.PartnersSuppliers2">
-                            <option>Yes</option>
-                            <option>No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Customization - Approx Number of Product Mods</label>
-                        <input class="form-control" name="Customization1" type="number" name="client" [(ngModel)]="tco.tShirtSizing.Customization1">
-                    </div>
-                    <div class="form-group">
-                        <label>Customization - Approx Number of Custom Logic</label>
-                        <input class="form-control" type="number" name="Customization2" [(ngModel)]="tco.tShirtSizing.Customization2">
-                    </div>
-                    <div class="form-group">
-                        <label>Interfaces - Number of Standard Interfaces integration (comes OOB)</label>
-                        <input class="form-control" type="number" name="Interfaces1" [(ngModel)]="tco.tShirtSizing.Interfaces1">
-                    </div>
-                    <div class="form-group">
-                        <label>Interfaces - Number of Non-Standard Interfaces integration (custom)</label>
-                        <input class="form-control" type="number" name="Interfaces2" [(ngModel)]="tco.tShirtSizing.Interfaces2">
-                    </div>
-                    <div class="form-group">
-                        <button class="but but-primary" (click)="calculateShirtSizing()">Submit</button>
-                       
-                      <!-- {{tco.tShirtSizing.Total}} {{tco.tShirtSizing.CurrentType}} {{tco.tShirtSizing.DurationOfImplementation}} -->
-                    </div>
-                </form>
-    
-                </div>
-    
-            </div>
-
-            <div class="tco_card" style="margin-top: 10px;">
-
-                <div class="card_header">
-
-                    <span>Output</span>
-
-                </div>
-
-                <div class="card_content">
-
-                    <ul class="output_list">
-
-                        <li class="output_list_item"  *ngIf="tco.tShirtSizing.CurrentType == 'Small'">
-
-                            <div class="output_item">
-
-                                <h5>Small</h5>
-                                <div>Standdard implementation</div>
-                                <p>$4750000 / 6 months</p>
-                                <div>Factory Implementation</div>
-                                <p>$260,000 / 4 Months</p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="output_list_item"  *ngIf="tco.tShirtSizing.CurrentType == 'Medium'">
-
-                            <h5>Medium</h5>
-                            <div>Standdard implementation</div>
-                            <p>$650,000 / 9 Months</p>
-                            <div>Factory Implementation</div>
-                            <p>$400,000 / 6 Months</p>
-                            
-                        </li>
-
-                        <li class="output_list_item" *ngIf="tco.tShirtSizing.CurrentType == 'Large'">
-
-                            <h5>Large</h5>
-                            <div>Standdard implementation</div>
-                            <p>$1,100,000 / 12 Months</p>
-                            <div>Factory Implementation</div>
-                            <p>$700,000 / 9 Months</p>
-                        
-                        </li>
-
-                        <li class="output_list_item" *ngIf="tco.tShirtSizing.CurrentType == 'Extra Large'">
-
-                            <h5>Ex Large</h5>
-                            <div>Standdard implementation</div>
-                            <p>$1,400,000 / 15 Months</p>
-                            <div>Factory Implementation</div>
-                            <p>$925,000 / 9 Months</p>
-                            
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-    
+  <div class="shirt_wrapper">
+    <div class="shirt_size_form" style="margin-right: 10px;">
+      <div class="tco_card">
+        <div class="card_header">
+          <span>T-Shirt Sizing Model</span>
         </div>
-    
-        <div class="shirt_size_tile">
 
-            <div class="shirt_size_brand">
-                <img src="../../../assets/icons/yonder.svg">
+        <div class="card_content">
+          <form>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Product</label>
+                  <select
+                    class="form-control"
+                    name="Product"
+                    [(ngModel)]="tco.tShirtSizing.Product"
+                  >
+                    <option>Demand Manager</option>
+                    <option>Demand Planner</option>
+                    <option>Supply Chain Planner</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Version</label>
+                  <select
+                    class="form-control"
+                    name="Version"
+                    [(ngModel)]="tco.tShirtSizing.Version"
+                  >
+                    <option>DP & DM - Version 5.2</option>
+                    <option>SCP - Version 4.2 thru 6.1</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            
-            <div class="offering_list_item">
-
-
-
-                <div class="offering_list_item_header">
-
-                    <div class="offering_list_item_header_icons">
-
-                        <img src="../../../assets/icons/shirt.svg">
-                    </div>
-
-                    <div class="offering_list_item_header_text">
-                        <span>Our Apporach</span>
-                    </div>
-
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Purpose</label>
+                  <select
+                    class="form-control"
+                    name="Purpose"
+                    [(ngModel)]="tco.tShirtSizing.Purpose"
+                  >
+                    <option>Re-implementation</option>
+                    <option>Transformation</option>
+                  </select>
                 </div>
-
-                <div class="offering_list_item_content">
-
-                    <p>
-                        Elapsed timelines, activities and resource plans from Discovery through to Deployment with a factory approach
-
-                  <br/>
-
-                        Estimation:
-                        
-                      <br/>
-                        
-                        Scoring based T-Shirt classification with a pre-defined questionnaire as part of Discovery phase
-                      <br/>
-                        Key Parameters related to Supply Chain Planning considered for Customer evaluation
-                      <br/>
-                        Weighted Average (WA) Score calculated from Customer response and the criticality of the Parameter.
-                        <br/>
-                       <br/>
-                        T-Shirt bucketing by WA
-                        <br/>
-                        Small:  150
-                      <br/>
-                        Medium: 150-199
-                        <br/>
-                        Large: 200-249
-                        <br/>
-                        Extra-Large: 250-300               
-                    </p>
-
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Lines of Business</label>
+                  <select
+                    class="form-control"
+                    name="LinesofBusiness"
+                    [(ngModel)]="tco.tShirtSizing.LinesofBusiness"
+                  >
+                    <option>B2B</option>
+                    <option>Retail</option>
+                    <option>Direct</option>
+                  </select>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>SCM Network Reach</label>
+                  <select
+                    class="form-control"
+                    name="SCMNetworkReach"
+                    [(ngModel)]="tco.tShirtSizing.SCMNetworkReach"
+                  >
+                    <option>Local</option>
+                    <option>Country</option>
+                    <option>Regional</option>
+                    <option>Global</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label
+                    >Product Hierarchy Complexity - Number of Product
+                    Hierarchy</label
+                  >
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="ProductHierarchyComplexity1"
+                    [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label
+                    >Product Hierarchy Complexity - Product Hierarchy
+                    Level</label
+                  >
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="ProductHierarchyComplexity2"
+                    [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity2"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Product Hierarchy Complexity</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="ProductHierarchyComplexity3"
+                    [(ngModel)]="tco.tShirtSizing.ProductHierarchyComplexity3"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Network Complexity</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="NetworkComplexity1"
+                    [(ngModel)]="tco.tShirtSizing.NetworkComplexity1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Network Complexity</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="NetworkComplexity2"
+                    [(ngModel)]="tco.tShirtSizing.NetworkComplexity2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Network Complexity</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="NetworkComplexity3"
+                    [(ngModel)]="tco.tShirtSizing.NetworkComplexity3"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Network Complexity</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="NetworkComplexity4"
+                    [(ngModel)]="tco.tShirtSizing.NetworkComplexity4"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Network Complexity</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="NetworkComplexity5"
+                    [(ngModel)]="tco.tShirtSizing.NetworkComplexity5"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Global Procurement Complexity</label>
+                  <select
+                    class="form-control"
+                    name="GlobalProcurementComplexity"
+                    [(ngModel)]="tco.tShirtSizing.GlobalProcurementComplexity"
+                  >
+                    <option>Simple</option>
+                    <option>Medium</option>
+                    <option>Complex</option>
+                    <option>Very Complex</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Number of Partners/ Suppliers</label>
+                  <input
+                    class="form-control"
+                    name="PartnersSuppliers1"
+                    type="number"
+                    name="client"
+                    [(ngModel)]="tco.tShirtSizing.PartnersSuppliers1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Deliver Supply Location</label>
+                  <select
+                    class="form-control"
+                    name="PartnersSuppliers2"
+                    [(ngModel)]="tco.tShirtSizing.PartnersSuppliers2"
+                  >
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Customization - Approx Number of Product Mods</label>
+                  <input
+                    class="form-control"
+                    name="Customization1"
+                    type="number"
+                    name="client"
+                    [(ngModel)]="tco.tShirtSizing.Customization1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label>Customization - Approx Number of Custom Logic</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="Customization2"
+                    [(ngModel)]="tco.tShirtSizing.Customization2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label
+                    >Interfaces - Number of Standard Interfaces integration
+                    (comes OOB)</label
+                  >
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="Interfaces1"
+                    [(ngModel)]="tco.tShirtSizing.Interfaces1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label
+                    >Interfaces - Number of Non-Standard Interfaces integration
+                    (custom)</label
+                  >
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="Interfaces2"
+                    [(ngModel)]="tco.tShirtSizing.Interfaces2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <button
+                    class="but but-primary"
+                    (click)="calculateShirtSizing()"
+                  >
+                  </button>
 
-                <!-- <div class="offering_list_item_action">
+                  <!-- {{tco.tShirtSizing.Total}} {{tco.tShirtSizing.CurrentType}} {{tco.tShirtSizing.DurationOfImplementation}} -->
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="tco_card" style="margin-top: 10px;">
+        <div class="card_header">
+          <span>Output</span>
+        </div>
+
+        <div class="card_content">
+          <ul class="output_list">
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Small'"
+            >
+              <div class="output_item">
+                <h5>Small</h5>
+                <div>Standdard implementation</div>
+                <p>$4750000 / 6 months</p>
+                <div>Factory Implementation</div>
+                <p>$260,000 / 4 Months</p>
+              </div>
+            </li>
+
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Medium'"
+            >
+              <h5>Medium</h5>
+              <div>Standdard implementation</div>
+              <p>$650,000 / 9 Months</p>
+              <div>Factory Implementation</div>
+              <p>$400,000 / 6 Months</p>
+            </li>
+
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Large'"
+            >
+              <h5>Large</h5>
+              <div>Standdard implementation</div>
+              <p>$1,100,000 / 12 Months</p>
+              <div>Factory Implementation</div>
+              <p>$700,000 / 9 Months</p>
+            </li>
+
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Extra Large'"
+            >
+              <h5>Ex Large</h5>
+              <div>Standdard implementation</div>
+              <p>$1,400,000 / 15 Months</p>
+              <div>Factory Implementation</div>
+              <p>$925,000 / 9 Months</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="shirt_size_tile">
+      <div class="shirt_size_brand">
+        <img src="../../../assets/icons/yonder.svg" />
+      </div>
+
+      <div class="offering_list_item">
+        <div class="offering_list_item_header">
+          <div class="offering_list_item_header_icons">
+            <img src="../../../assets/icons/shirt.svg" />
+          </div>
+
+          <div class="offering_list_item_header_text">
+            <span>Our Apporach</span>
+          </div>
+        </div>
+
+        <div class="offering_list_item_content">
+          <p>
+            Elapsed timelines, activities and resource plans from Discovery
+            through to Deployment with a factory approach
+
+            <br />
+
+            Estimation:
+
+            <br />
+
+            Scoring based T-Shirt classification with a pre-defined
+            questionnaire as part of Discovery phase
+            <br />
+            Key Parameters related to Supply Chain Planning considered for
+            Customer evaluation
+            <br />
+            Weighted Average (WA) Score calculated from Customer response and
+            the criticality of the Parameter.
+            <br />
+            <br />
+            T-Shirt bucketing by WA
+            <br />
+            Small: 150
+            <br />
+            Medium: 150-199
+            <br />
+            Large: 200-249
+            <br />
+            Extra-Large: 250-300
+          </p>
+        </div>
+
+        <!-- <div class="offering_list_item_action">
 
                     <button (click)="goToShirt()"></button>
 
                 </div> -->
-
-            </div>
-        
-        </div>
-
+      </div>
     </div>
+  </div>
 </div>
-
