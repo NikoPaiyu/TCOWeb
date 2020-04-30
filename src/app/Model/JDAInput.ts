@@ -5,7 +5,7 @@ export class JDAInput {
 
     SumJDA;
 
-    amount = [];
+    amount = [0.0];
 
     public getCurrentOnPermiseApplcatinDetail() {
         return this.clientInput.CurrentOnpremiseApplication;
