@@ -1,7 +1,7 @@
 export class TShirtSizing
 {
     Product:string = 'Demand Manager';
-    Version:string  = 'n - 1';
+    Version:string  = 'n-6 and lesser(Extra Large)';
     Purpose:string = 'Implementation';
     LinesofBusiness:string = 'Direct';
     SCMNetworkReach:string = 'Country';
