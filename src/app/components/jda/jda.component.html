@@ -9,35 +9,7 @@
       <span style="color: #fff;">WMS</span>
     </div>
 
-    <ul>
-      <li *ngFor="let jda of jdaList; let i = index">
-        <div class="tco_card">
-          <div class="card_header">
-            <span>{{ jda.description }}</span>
-          </div>
 
-          <div class="card_content">
-            <div class="card_content_checkbox">
-              <input type="checkbox" id="Licenced{{i}}"
-              [(ngModel)]="tco.clientInput.Licenced[i]"/>Licened By {{tco.beginPage.ClientName}}
-              <input type="checkbox" />Available on the cloud
-            </div>
-
-            <div class="card_content_input">
-              <div class="form-group">
-                <input
-                  class="form-control"
-                  placeholder="Price per user"
-                  type="number"
-                  name="{{ i }}"
-                  [(ngModel)]="tco.jdaInput.amount[i]"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
 
     <div class="jda_total_cost">
       <div class="tco_card">
