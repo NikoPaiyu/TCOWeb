@@ -161,22 +161,40 @@ export class OutputComponent implements OnInit {
   constructor(private route: Router, private local: LocalService, private tcoservice: TCOService) {}
 
   chartOptions = {
-    responsive: true
+    responsive: true,
+    legend: { labels : {
+      fontColor : '#ffffff',
+    }
+  },
+   scales: {
+      xAxes: [{
+         ticks: {
+            fontColor: 'white',
+         }
+      }],
+      yAxes: [{
+        ticks: {
+           fontColor: 'white',
+        }
+     }]
+    }
   };
 
   chartData = [{
       data: [4384000, 4384000, 4384000, 4384000, 4384000],
-      label: 'WMS'
+      label: 'WMS',
+      fontColor: 'white'
     },
     {
       data: [3272000, 3272000, 1536000, 2661000, 2661000],
-      label: 'Cloud'
+      label: 'Cloud',
+      fontColor: 'white'
     }
   ];
 
   public chartColors: any[] = [
-    { 
-      backgroundColor:["#007BFF", "#60c5ba","#007BFF", "#60c5ba","#60c5ba"] 
+    {
+      backgroundColor: ['#007BFF', '#60c5ba', '#007BFF', '#60c5ba', '#60c5ba']
     }];
 
   chartLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
