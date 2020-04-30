@@ -122,7 +122,7 @@
                     <div class="form-group">
                         <button class="but but-primary" (click)="calculateShirtSizing()">Submit</button>
                        
-                      {{tco.tShirtSizing.Total}} {{tco.tShirtSizing.CurrentType}} {{tco.tShirtSizing.DurationOfImplementation}}
+                      <!-- {{tco.tShirtSizing.Total}} {{tco.tShirtSizing.CurrentType}} {{tco.tShirtSizing.DurationOfImplementation}} -->
                     </div>
                 </form>
     
@@ -142,7 +142,7 @@
 
                     <ul class="output_list">
 
-                        <li class="output_list_item" >
+                        <li class="output_list_item"  *ngIf="tco.tShirtSizing.CurrentType == 'Small'">
 
                             <div class="output_item">
 
@@ -156,7 +156,7 @@
 
                         </li>
 
-                        <li class="output_list_item">
+                        <li class="output_list_item"  *ngIf="tco.tShirtSizing.CurrentType == 'Medium'">
 
                             <h5>Medium</h5>
                             <div>Standdard implementation</div>
@@ -166,7 +166,7 @@
                             
                         </li>
 
-                        <li class="output_list_item">
+                        <li class="output_list_item" *ngIf="tco.tShirtSizing.CurrentType == 'Large'">
 
                             <h5>Large</h5>
                             <div>Standdard implementation</div>
@@ -176,7 +176,7 @@
                         
                         </li>
 
-                        <li class="output_list_item">
+                        <li class="output_list_item" *ngIf="tco.tShirtSizing.CurrentType == 'Extra Large'">
 
                             <h5>Ex Large</h5>
                             <div>Standdard implementation</div>

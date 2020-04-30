@@ -331,7 +331,7 @@ else if (this.total> 201 && this.total < 250)
   this.tco.tShirtSizing.DurationOfImplementation= '7 - 9 months';
 }
 
-else if (this.total> 251 && this.total < 300)
+else if (this.total> 251)
 {
   this.tco.tShirtSizing.CurrentType = 'Extra Large'
   this.tco.tShirtSizing.DurationOfImplementation= '9 - 12 months'
