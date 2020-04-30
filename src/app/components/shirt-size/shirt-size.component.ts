@@ -307,16 +307,16 @@ export class ShirtSizeComponent implements OnInit {
 
     this.tco.tShirtSizing.Total = this.total;
 
-    if (this.total <= 150) {
+    if (this.total <= 200) {
       this.tco.tShirtSizing.CurrentType = 'Small';
       this.tco.tShirtSizing.DurationOfImplementation = 'upto 3 months';
-    } else if (this.total > 151 && this.total <= 200) {
+    } else if (this.total > 201 && this.total <= 250) {
       this.tco.tShirtSizing.CurrentType = 'Medium';
       this.tco.tShirtSizing.DurationOfImplementation = '4 - 6 months';
-    } else if (this.total >= 201 && this.total <= 250) {
+    } else if (this.total >= 251 && this.total <= 300) {
       this.tco.tShirtSizing.CurrentType = 'Large';
       this.tco.tShirtSizing.DurationOfImplementation = '7 - 9 months';
-    } else if (this.total >= 251) {
+    } else if (this.total >= 301) {
       this.tco.tShirtSizing.CurrentType = 'Extra Large';
       this.tco.tShirtSizing.DurationOfImplementation = '9 - 12 months';
     }
