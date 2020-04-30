@@ -174,3 +174,23 @@ ul {
     }
 
 }
+
+
+.but {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color:   #007BFF;
+    border: 0px;
+    background-image:url('./assets/icons/arrow.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    content:'';
+}
+
+.previous {
+    background-image:url('./assets/icons/prev.svg') !important;
+}
+
+
