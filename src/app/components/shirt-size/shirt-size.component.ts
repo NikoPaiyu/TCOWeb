@@ -40,22 +40,22 @@ this.total = this.total + 20;
     {
       this.total = this.total + 30;
     }
-
-    if (this.tco.tShirtSizing.Version = 'n - 1')
+            
+    if (this.tco.tShirtSizing.Version = 'n - 1 (Small)')
     {
       this.total = this.total + 15;
     }
-    else  if (this.tco.tShirtSizing.Version = 'n - 2')
+    else  if (this.tco.tShirtSizing.Version = 'n - 2 to 4 (Medium)')
     {
       this.total = this.total + 20;
     }
 
-    else  if (this.tco.tShirtSizing.Version = 'n - 3')
+    else  if (this.tco.tShirtSizing.Version = 'n - 4 to 6 (Large)')
     {
       this.total = this.total + 25;
     }
 
-    else  if (this.tco.tShirtSizing.Version = 'n - 4')
+    else  if (this.tco.tShirtSizing.Version = 'n-6 and lesser(Extra Large)')
     {
       this.total = this.total + 30;
     }
