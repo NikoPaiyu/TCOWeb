@@ -174,6 +174,11 @@ export class OutputComponent implements OnInit {
     }
   ];
 
+  public chartColors: any[] = [
+    { 
+      backgroundColor:["#007BFF", "#60c5ba","#007BFF", "#60c5ba","#60c5ba"] 
+    }];
+
   chartLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
 
   ngOnInit() {

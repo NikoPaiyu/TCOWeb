@@ -20,10 +20,157 @@ ul {
 .tco_footer {
     display:flex;
     justify-content:space-between;
-    padding-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     .pre {
         margin-right: 10px;
     }
+}
+
+
+
+.offering_content {
+
+
+    .offering_list {
+        display: flex;
+        flex-direction: row;
+
+
+        .offering_list_item {
+            border: 3px solid #007BFF;
+            padding: 30px;
+            color: #fff;
+            width:300px;
+            position: relative;
+            cursor: pointer;
+            margin-left: 5px;
+
+            .offering_list_item_header {
+                margin-bottom: 10px;
+
+                .offering_list_item_header_icons {
+                    margin-bottom:20px ;
+                }
+
+                .offering_list_item_header_text{
+
+                    span {
+                        font-size: 18px;
+                        font-family: MetricHPE-Semibold;
+                    }
+
+                }
+
+            }
+
+
+            .offering_list_item_content {
+
+                p {
+                    font-family: MetricHPE-Light;
+                }
+            }
+
+            .offering_list_item_action {
+                position: absolute;
+                bottom: -35px;
+                left: 30px;
+
+                button {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                    background-color:   #007BFF;
+                    border: 0px;
+                    // background-image:url('../../../assets/icons/arrow.svg');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 30px;
+                }
+
+            }
+
+
+            &:nth-child(1){
+                margin-left: 0px;
+            }
+
+            &:hover {
+                background-color:  #007BFF;
+            }
+
+        }
+
+
+
+    }
+
+}
+
+
+.offering_list_item {
+    border: 3px solid #007BFF;
+    padding: 30px;
+    color: #fff;
+    width:300px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 5px;
+
+    .offering_list_item_header {
+        margin-bottom: 10px;
+
+        .offering_list_item_header_icons {
+            margin-bottom:20px ;
+        }
+
+        .offering_list_item_header_text{
+
+            span {
+                font-size: 18px;
+                font-family: MetricHPE-Semibold;
+            }
+
+        }
+
+    }
+
+
+    .offering_list_item_content {
+
+        p {
+            font-family: MetricHPE-Light;
+        }
+    }
+
+    .offering_list_item_action {
+        position: absolute;
+        bottom: -35px;
+        left: 30px;
+
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color:   #007BFF;
+            border: 0px;
+            // background-image:url('../../../assets/icons/arrow.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+
+    }
+
+
+    &:nth-child(1){
+        margin-left: 0px;
+    }
+
+    &:hover {
+        background-color:  #007BFF;
+    }
+
 }

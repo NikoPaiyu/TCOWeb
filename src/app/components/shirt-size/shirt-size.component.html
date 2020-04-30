@@ -1,138 +1,210 @@
 <div class="container-fluid">
     <div class="shirt_wrapper">
 
+        <div class="shirt_size_form" style="margin-right: 10px;">
+            <div class="tco_card">
 
-        <div class="tco_card">
-
-            <div class="card_header">
-                <span>T-Shirt Sizing Model</span>
+                <div class="card_header">
+                    <span>T-Shirt Sizing Model</span>
+                </div>
+    
+    
+                <div class="card_content">
+    
+                    <form>
+                        <div class="form-group">
+                            <label>Product</label>
+                            <select class="form-control" [(ngModel)]="this.client.clientName">
+                                <option>Demand Manager</option>
+                                <option>Demand Planner</option>
+                                <option>Supply Chain Planner</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Version</label>
+                            <select class="form-control" [(ngModel)]="this.client.clientName">
+                                <option>DP & DM - Version 5.2</option>
+                                <option>SCP - Version 4.2 thru 6.1</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Purpose</label>
+                            <select class="form-control" [(ngModel)]="this.client.clientName">
+                                <option>Re-implementation</option>
+                                <option>Transformation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Lines of Business</label>
+                            <select class="form-control" [(ngModel)]="this.client.clientName">
+                                <option>B2B</option>
+                                <option>Retail</option>
+                                <option>Direct</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>SCM Network Reach</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Product Hierarchy Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Product Hierarchy Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Product Hierarchy Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Network Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Network Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Network Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Network Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Network Complexity</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Global Procurement Complexity</label>
+                            <select class="form-control" [(ngModel)]="this.client.clientName">
+                                <option>Involmenet of Customs</option>
+                                <option>Govt Autohorities</option>
+                                <option>Shipping Lines</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Partners/Supliers</label>
+                            <select class="form-control" [(ngModel)]="this.client.clientName">
+                                <option>NUmbers of Partners</option>
+                                <option>Suppliers</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Partners/Supliers</label>
+                            <select class="form-control" [(ngModel)]="this.client.clientName">
+                                <option>Deliver Supply Location -Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Customization</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Customization</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Interfaces</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <label>Interfaces</label>
+                            <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
+                        </div>
+                        <div class="form-group">
+                            <button class="but but-primary">Submit</button>
+                        </div>
+                    </form>
+    
+                </div>
+    
             </div>
 
+            <div class="tco_card" style="margin-top: 10px;">
 
-            <div class="card_content">
+                <div class="card_header">
 
-                <form>
-                    <div class="form-group">
-                        <label>Product</label>
-                        <select class="form-control" [(ngModel)]="this.client.clientName">
-                            <option>Demand Manager</option>
-                            <option>Demand Planner</option>
-                            <option>Supply Chain Planner</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Version</label>
-                        <select class="form-control" [(ngModel)]="this.client.clientName">
-                            <option>DP & DM - Version 5.2</option>
-                            <option>SCP - Version 4.2 thru 6.1</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Purpose</label>
-                        <select class="form-control" [(ngModel)]="this.client.clientName">
-                            <option>Re-implementation</option>
-                            <option>Transformation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Lines of Business</label>
-                        <select class="form-control" [(ngModel)]="this.client.clientName">
-                            <option>B2B</option>
-                            <option>Retail</option>
-                            <option>Direct</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>SCM Network Reach</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Product Hierarchy Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Product Hierarchy Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Product Hierarchy Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Network Complexity</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Global Procurement Complexity</label>
-                        <select class="form-control" [(ngModel)]="this.client.clientName">
-                            <option>Involmenet of Customs</option>
-                            <option>Govt Autohorities</option>
-                            <option>Shipping Lines</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Partners/Supliers</label>
-                        <select class="form-control" [(ngModel)]="this.client.clientName">
-                            <option>NUmbers of Partners</option>
-                            <option>Suppliers</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Partners/Supliers</label>
-                        <select class="form-control" [(ngModel)]="this.client.clientName">
-                            <option>Deliver Supply Location -Yes</option>
-                            <option>No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Customization</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Customization</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Interfaces</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <label>Interfaces</label>
-                        <input class="form-control" type="text" name="client" [(ngModel)]="this.client.clientName">
-                    </div>
-                    <div class="form-group">
-                        <button class="but but-primary">Submit</button>
-                    </div>
-                </form>
+                    <span>Output</span>
+
+                </div>
+
+                <div class="card_content">
+
+
+                </div>
 
             </div>
+    
+        </div>
+    
+        <div class="shirt_size_tile">
 
+            <div class="shirt_size_brand">
+                <img src="../../../assets/icons/yonder.svg">
+            </div>
+            
+            <div class="offering_list_item">
+
+
+
+                <div class="offering_list_item_header">
+
+                    <div class="offering_list_item_header_icons">
+
+                        <img src="../../../assets/icons/shirt.svg">
+                    </div>
+
+                    <div class="offering_list_item_header_text">
+                        <span>Our Apporach</span>
+                    </div>
+
+                </div>
+
+                <div class="offering_list_item_content">
+
+                    <p>
+                        Elapsed timelines, activities and resource plans from Discovery through to Deployment with a factory approach
+
+ 
+
+                        Estimation:
+                        
+                         
+                        
+                        •Scoring based T-Shirt classification with a pre-defined questionnaire as part of Discovery phase
+                        
+                        •Key Parameters related to Supply Chain Planning considered for Customer evaluation
+                        
+                        •Weighted Average (WA) Score calculated from Customer response and the criticality of the Parameter.
+                        
+                        •T-Shirt bucketing by WA
+                        
+                        Small:  150
+                        
+                        Medium: 150-199
+                        
+                        Large: 200-249
+                        
+                        Extra-Large: 250-300               
+                    </p>
+
+                </div>
+
+                <!-- <div class="offering_list_item_action">
+
+                    <button (click)="goToShirt()"></button>
+
+                </div> -->
+
+            </div>
+        
         </div>
 
-        
-    
-   
-    
-    
-    
-    
-    
     </div>
 </div>
 

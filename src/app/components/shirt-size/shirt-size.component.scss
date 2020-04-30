@@ -1,3 +1,31 @@
 .shirt_wrapper {
     margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+
+
+    
+    .shirt_size_form {
+        flex: 1;
+
+        .tco_card {
+
+            .card_header {
+                font-size: 22px;
+                font-weight: bold;
+                border-bottom:1px solid #007BFF;
+            }
+        }
+
+    }
+
+    .shirt_size_tile{
+     
+
+        .shirt_size_brand {
+            text-align: right;
+        }
+    }
+
+
 }

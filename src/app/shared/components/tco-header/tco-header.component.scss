@@ -1,17 +1,17 @@
 .tco_header {
-    background-color:  #444;
+    background-color:  #333;
     color: #fff;
     box-sizing: content-box;
     padding: 20px 15px;
     display:flex;
     justify-content:flex-start;
     align-items:center;
-    border-bottom: 1px solid #313131;
+   
 
 
     .tco_header_brand {
         font-weight: 600;
-        color: #fff;
+        color:   #007BFF;
         font-size: 18px;
         margin-right: 20px;
         border-right: 1px solid #fff;
@@ -24,7 +24,7 @@
 
 
         .tco_header_heading {
- 
+
 
             label {
                 display:block;

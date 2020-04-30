@@ -8,10 +8,15 @@
                 background : transparent !important;
                 color: #fff !important;
                 font-weight: 600 !important;
-                border-bottom: 3px solid #fff !important;
+                border-bottom: 3px solid #007BFF !important;
             }
 
         &:hover {
             color: #fff !important;
         }
+}
+
+
+.nav-tabs {
+    border-bottom: 0px !important;
 }

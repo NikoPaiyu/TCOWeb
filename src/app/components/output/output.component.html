@@ -1,3 +1,8 @@
+<div class="tco_footer">
+  <!-- <app-tco-footer ></app-tco-footer> -->
+  <button  class="but but-primary" (click)="goToClient()">Previous</button>
+</div>
+
 <div class="output_wrapper">
 
   <div class="output_sections">
@@ -406,6 +411,7 @@
 
                   <canvas
                   baseChart
+                  [colors]="chartColors"
                   [chartType]="'bar'"
                   [datasets]="chartData"
                   [labels]="chartLabels"
