@@ -186,7 +186,7 @@ export class OutputComponent implements OnInit {
       fontColor: 'white'
     },
     {
-      data: [3272000, 3272000, 1536000, 2661000, 2661000],
+      data: [3272000, 3272000, 2836000, 2661000, 2461000],
       label: 'Cloud',
       fontColor: 'white'
     }
