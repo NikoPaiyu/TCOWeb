@@ -1,3 +1,27 @@
+<div class="tco_header">
+
+  <!-- <div class="offering_header">
+      <span>Wipro's BlueYonder Offering</span>
+
+      <div class="offering_header_icon">
+          <img src="../../../assets/icons/yonder.svg" width="20%">
+          <img src="../../../assets/icons/wipro.png" width="20%">
+      </div>
+  </div> -->
+
+  <div class="tco_header_brand">
+      <span routerLink="">TCO CALCULATOR</span>
+  </div>
+
+  <div class="tco_sub_header">
+      <div class="tco_header_heading">
+          <label>Total cost of ownership (TCO) is an analysis that places a single value on the complete lifecycle of a capital purchase.</label>
+          <span>This value includes every phase of ownership: acquisition, operation, and the softer costs of change management that flows down from acquisition such as documentation and training.</span>
+      </div>
+  </div>
+
+</div>
+
 <div class="container-fluid">
   <div class="shirt_wrapper">
     <div class="shirt_size_form" style="margin-right: 10px;">
@@ -259,8 +283,8 @@
             </div>
             <div class="row">
               <div class="col-sm">
-                <div class="form-group">
-                  <button
+                <div class="form-group" style="text-align: right;">
+                  <button 
                     class="but but-primary"
                     (click)="calculateShirtSizing()"
                   >
@@ -273,70 +297,11 @@
           </form>
         </div>
       </div>
-
-      <!-- <div class="tco_card" style="margin-top: 10px;">
-        <div class="card_header">
-          <span>Output</span>
-        </div>
-
-        <div class="card_content">
-          <ul class="output_list">
-            <li
-              class="output_list_item"
-              *ngIf="tco.tShirtSizing.CurrentType == 'Small'"
-            >
-              <div class="output_item">
-                <h5>Small</h5>
-                <div>Standdard implementation</div>
-                <p>$4750000 / 6 months</p>
-                <div>Factory Implementation</div>
-                <p>$260,000 / 4 Months</p>
-              </div>
-            </li>
-
-            <li
-              class="output_list_item"
-              *ngIf="tco.tShirtSizing.CurrentType == 'Medium'"
-            >
-              <h5>Medium</h5>
-              <div>Standdard implementation</div>
-              <p>$650,000 / 9 Months</p>
-              <div>Factory Implementation</div>
-              <p>$400,000 / 6 Months</p>
-            </li>
-
-            <li
-              class="output_list_item"
-              *ngIf="tco.tShirtSizing.CurrentType == 'Large'"
-            >
-              <h5>Large</h5>
-              <div>Standdard implementation</div>
-              <p>$1,100,000 / 12 Months</p>
-              <div>Factory Implementation</div>
-              <p>$700,000 / 9 Months</p>
-            </li>
-
-            <li
-              class="output_list_item"
-              *ngIf="tco.tShirtSizing.CurrentType == 'Extra Large'"
-            >
-              <h5>Ex Large</h5>
-              <div>Standdard implementation</div>
-              <p>$1,400,000 / 15 Months</p>
-              <div>Factory Implementation</div>
-              <p>$925,000 / 9 Months</p>
-            </li>
-          </ul>
-        </div>
-      </div> -->
     </div>
 
     <div class="shirt_size_tile">
-      <div class="shirt_size_brand">
-        <img src="../../../assets/icons/yonder.svg" />
-      </div>
-
-      <div class="offering_list_item">
+  
+      <div class="offering_list_item" style="height : 100%;">
         <div class="offering_list_item_header">
           <div class="offering_list_item_header_icons">
             <img src="../../../assets/icons/shirt.svg" />
@@ -387,71 +352,87 @@
 
                 </div> -->
       </div>
-      <div class="offering_list_item">
-        <div class="offering_list_item_header">
-         
 
-          <div class="offering_list_item_header_text">
-            <div class="tco_card" style="margin-top: 1px;">
-              <div class="card_header">
-                <span>Output</span>
-              </div>
-      
-              <div class="card_content">
-                <ul class="output_list">
-                  <li
-                    class="output_list_item"
-                    *ngIf="tco.tShirtSizing.CurrentType == 'Small'"
-                  >
-                    <div class="output_item">
-                      <h5>Small</h5>
-                      <div>Standdard implementation</div>
-                      <p>$4750000 / 6 months</p>
-                      <div>Factory Implementation</div>
-                      <p>$260,000 / 4 Months</p>
-                    </div>
-                  </li>
-      
-                  <li
-                    class="output_list_item"
-                    *ngIf="tco.tShirtSizing.CurrentType == 'Medium'"
-                  >
-                    <h5>Medium</h5>
-                    <div>Standdard implementation</div>
-                    <p>$650,000 / 9 Months</p>
-                    <div>Factory Implementation</div>
-                    <p>$400,000 / 6 Months</p>
-                  </li>
-      
-                  <li
-                    class="output_list_item"
-                    *ngIf="tco.tShirtSizing.CurrentType == 'Large'"
-                  >
-                    <h5>Large</h5>
-                    <div>Standdard implementation</div>
-                    <p>$1,100,000 / 12 Months</p>
-                    <div>Factory Implementation</div>
-                    <p>$700,000 / 9 Months</p>
-                  </li>
-      
-                  <li
-                    class="output_list_item"
-                    *ngIf="tco.tShirtSizing.CurrentType == 'Extra Large'"
-                  >
-                    <h5>Ex Large</h5>
-                    <div>Standdard implementation</div>
-                    <p>$1,400,000 / 15 Months</p>
-                    <div>Factory Implementation</div>
-                    <p>$925,000 / 9 Months</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+  </div>
+</div>
 
+<div class="offering_list_item" style="margin-top: 10px;width:100% !important;margin-left:0px !important">
+  <div class="offering_list_item_header">
+   
+
+    <div class="offering_list_item_header_text">
+      <div class="tco_card" >
+        <div class="card_header">
+          <span>Sizing Results</span>
+        </div>
+
+        <div class="card_content">
+          <ul class="output_list">
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Small'"
+            >
+              <div class="output_item">
+                <h5>Small</h5>
+                <div>Standdard implementation</div>
+                <p>$4750000 / 6 months</p>
+                <div>Factory Implementation</div>
+                <p>$260,000 / 4 Months</p>
+              </div>
+            </li>
+
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Medium'"
+            >
+              <h5>Medium</h5>
+              <div>Standdard implementation</div>
+              <p>$650,000 / 9 Months</p>
+              <div>Factory Implementation</div>
+              <p>$400,000 / 6 Months</p>
+            </li>
+
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Large'"
+            >
+              <h5>Large</h5>
+              <div>Standdard implementation</div>
+              <p>$1,100,000 / 12 Months</p>
+              <div>Factory Implementation</div>
+              <p>$700,000 / 9 Months</p>
+            </li>
+
+            <li
+              class="output_list_item"
+              *ngIf="tco.tShirtSizing.CurrentType == 'Extra Large'"
+            >
+              <h5>Ex Large</h5>
+              <div>Standdard implementation</div>
+              <p>$1,400,000 / 15 Months</p>
+              <div>Factory Implementation</div>
+              <p>$925,000 / 9 Months</p>
+            </li>
+          </ul>
+
+          <div class="graph" >
+            <canvas
+            baseChart
+            [colors]="chartColors"
+            [chartType]="'bar'"
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartClick)="onChartClick($event)">
+        </canvas>
+          </div>
 
         </div>
       </div>
-    </div>
+
+
   </div>
+</div>
 </div>
 </div>

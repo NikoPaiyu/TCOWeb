@@ -42,10 +42,16 @@
             font-size: 30px;
             font-family: MetricHPE-Medium;
             color: #fff;
+            text-transform: uppercase;
         }
 
         .offering_header_icon {
+            display: flex;
+            justify-content: flex-end;
 
+            img:nth-child(1){
+                margin-right: 10px;
+            }
         }
     }
 
@@ -70,7 +76,7 @@
                     margin-bottom: 10px;
 
                     .offering_list_item_header_icons {
-                        margin-bottom:20px ;
+                        margin-bottom:20px;
                     }
 
                     .offering_list_item_header_text{

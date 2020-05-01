@@ -6,7 +6,7 @@
 
     
     .shirt_size_form {
-        flex: 1;
+        flex: 3;
 
         .tco_card {
 
@@ -20,7 +20,7 @@
     }
 
     .shirt_size_tile{
-     
+        flex: 1;
 
         .shirt_size_brand {
             text-align: right;
@@ -44,3 +44,16 @@
 
 }
 
+.card_content {
+    display: flex;
+    flex-direction: row;
+
+    .output_list {
+        flex : 1;
+    }
+
+    .graph {
+        flex : 1;
+    }
+
+}

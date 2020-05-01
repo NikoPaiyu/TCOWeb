@@ -7,10 +7,8 @@
     justify-content:flex-start;
     align-items:center;
    
-
-
     .tco_header_brand {
-        font-weight: 600;
+        font-weight: 800;
         color:   #007BFF;
         font-size: 18px;
         margin-right: 20px;
@@ -29,11 +27,13 @@
             label {
                 display:block;
                 margin-bottom: 0px;
-                font-weight: 600;
+                font-family: MetricHPE-Regular;
+                font-size: 20px;
             }
     
             span {
                 font-size: 14px;
+                font-family: MetricHPE-Light;
             }
     
         }

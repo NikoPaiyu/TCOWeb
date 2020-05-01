@@ -1,8 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { TCO } from 'src/app/Model/TCO';
-import { LocalService } from 'src/app/shared/services/local.service';
-import { TCOService } from 'src/app/shared/services/tco.service';
-import { Router } from '@angular/router';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  TCO
+} from 'src/app/Model/TCO';
+import {
+  LocalService
+} from 'src/app/shared/services/local.service';
+import {
+  TCOService
+} from 'src/app/shared/services/tco.service';
+import {
+  Router
+} from '@angular/router';
 
 @Component({
   selector: 'app-shirt-size',
@@ -18,9 +29,55 @@ export class ShirtSizeComponent implements OnInit {
   currentState;
   ImplementationDuration;
 
+
+
   ngOnInit() {
     this.tco = this.tcoservice.getTCO();
   }
+
+  chartOptions = {
+    responsive: true,
+    legend: {
+      labels: {
+        fontColor: '#ffffff',
+      }
+    },
+    scales: {
+      xAxes: [{
+        ticks: {
+          fontColor: 'white',
+   
+        }
+      }],
+      yAxes: [{
+        ticks: {
+          fontColor: 'white',
+          max : 1200000,
+          min: 400000
+        }
+      }]
+    }
+  };
+
+
+  // tslint:disable-next-line: member-ordering
+  chartData = [{
+      data: [0],
+      label: 'Factory Implementation',
+      fontColor: 'white'
+    },
+    {
+      data: [0],
+      label: 'Standard Implementation',
+      fontColor: 'white'
+    }
+  ];
+
+  public chartColors: any[] = [{
+    backgroundColor: ['#007BFF', '#60c5ba', '#007BFF', '#60c5ba', '#60c5ba']
+  }];
+
+  chartLabels = [''];
 
   calculateShirtSizing() {
     this.total = 0;
@@ -240,8 +297,7 @@ export class ShirtSizeComponent implements OnInit {
       this.total = this.total + 15;
     }
 
-    if ((this.tco.tShirtSizing.Customization1 === 0)) {
-    } else if ((this.tco.tShirtSizing.Customization1 === 1)) {
+    if ((this.tco.tShirtSizing.Customization1 === 0)) {} else if ((this.tco.tShirtSizing.Customization1 === 1)) {
       this.total = this.total + 5;
     } else if ((this.tco.tShirtSizing.Customization1 === 2)) {
       this.total = this.total + 10;
@@ -290,8 +346,7 @@ export class ShirtSizeComponent implements OnInit {
     if (
       this.tco.tShirtSizing.Interfaces2 > 0 &&
       this.tco.tShirtSizing.Interfaces2 <= 0
-    ) {
-    } else if (
+    ) {} else if (
       this.tco.tShirtSizing.Interfaces2 > 1 &&
       this.tco.tShirtSizing.Interfaces2 <= 3
     ) {
@@ -310,15 +365,74 @@ export class ShirtSizeComponent implements OnInit {
     if (this.total <= 200) {
       this.tco.tShirtSizing.CurrentType = 'Small';
       this.tco.tShirtSizing.DurationOfImplementation = 'upto 3 months';
+      this.tco['standardImplementation'] = 4750000;
+      this.tco['factoryImplementation'] = 260000;
+
+      this.chartData = [{
+        data: [260000],
+        label: 'Factory Implementation',
+        fontColor: 'white'
+      },
+      {
+        data: [4750000],
+        label: 'Standard Implementation',
+        fontColor: 'white'
+      }
+    ];
+
     } else if (this.total > 201 && this.total <= 250) {
       this.tco.tShirtSizing.CurrentType = 'Medium';
       this.tco.tShirtSizing.DurationOfImplementation = '4 - 6 months';
+      this.tco['standardImplementation'] = 650000;
+      this.tco['factoryImplementation'] = 400000;
+
+      this.chartData = [{
+        data: [400000],
+        label: 'Factory Implementation',
+        fontColor: 'white'
+      },
+      {
+        data: [650000],
+        label: 'Standard Implementation',
+        fontColor: 'white'
+      }
+    ];
+
     } else if (this.total >= 251 && this.total <= 300) {
       this.tco.tShirtSizing.CurrentType = 'Large';
       this.tco.tShirtSizing.DurationOfImplementation = '7 - 9 months';
+      this.tco['standardImplementation'] = 1100000;
+      this.tco['factoryImplementation'] = 700000;
+
+      this.chartData = [{
+        data: [700000],
+        label: 'Factory Implementation',
+        fontColor: 'white'
+      },
+      {
+        data: [1100000],
+        label: 'Standard Implementation',
+        fontColor: 'white'
+      }
+    ];
     } else if (this.total >= 301) {
       this.tco.tShirtSizing.CurrentType = 'Extra Large';
       this.tco.tShirtSizing.DurationOfImplementation = '9 - 12 months';
+      this.tco['standardImplementation'] = 1400000;
+      this.tco['factoryImplementation'] = 925000;
+
+      this.chartData = [{
+        data: [925000],
+        label: 'Factory Implementation',
+        fontColor: 'white'
+      },
+      {
+        data: [1400000],
+        label: 'Standard Implementation',
+        fontColor: 'white'
+      }
+    ];
+
     }
     console.log(this.tco.tShirtSizing);
     console.log(this.tco.tShirtSizing.DurationOfImplementation);
