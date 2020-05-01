@@ -83,11 +83,11 @@ export class ShirtSizeComponent implements OnInit {
     this.total = 0;
 
     if ((this.tco.tShirtSizing.Product === 'Demand Manager')) {
-      this.total = this.total + 20;
+      //this.total = this.total + 20;
     } else if ((this.tco.tShirtSizing.Product === 'Demand Planner')) {
-      this.total = this.total + 25;
+      //this.total = this.total + 25;
     } else if ((this.tco.tShirtSizing.Product === 'Supply Chain Planner')) {
-      this.total = this.total + 30;
+      //this.total = this.total + 30;
     }
 
     if ((this.tco.tShirtSizing.Version === 'n - 1 (Small)')) {
@@ -103,9 +103,9 @@ export class ShirtSizeComponent implements OnInit {
     }
 
     if ((this.tco.tShirtSizing.Purpose === 'Implementation')) {
-      this.total = this.total + 20;
+      //this.total = this.total + 20;
     } else if ((this.tco.tShirtSizing.Purpose === 'Transformation')) {
-      this.total = this.total + 15;
+      //this.total = this.total + 15;
     }
 
     if ((this.tco.tShirtSizing.LinesofBusiness === 'B2B')) {
@@ -362,7 +362,7 @@ export class ShirtSizeComponent implements OnInit {
 
     this.tco.tShirtSizing.Total = this.total;
 
-    if (this.total <= 200) {
+    if (this.total <= 180) {
       this.tco.tShirtSizing.CurrentType = 'Small';
       this.tco.tShirtSizing.DurationOfImplementation = 'upto 3 months';
       this.tco['standardImplementation'] = 4750000;
@@ -380,7 +380,7 @@ export class ShirtSizeComponent implements OnInit {
       }
     ];
 
-    } else if (this.total > 201 && this.total <= 250) {
+    } else if (this.total > 181 && this.total <= 230) {
       this.tco.tShirtSizing.CurrentType = 'Medium';
       this.tco.tShirtSizing.DurationOfImplementation = '4 - 6 months';
       this.tco['standardImplementation'] = 650000;
@@ -398,7 +398,7 @@ export class ShirtSizeComponent implements OnInit {
       }
     ];
 
-    } else if (this.total >= 251 && this.total <= 300) {
+    } else if (this.total >= 231 && this.total <= 280) {
       this.tco.tShirtSizing.CurrentType = 'Large';
       this.tco.tShirtSizing.DurationOfImplementation = '7 - 9 months';
       this.tco['standardImplementation'] = 1100000;
@@ -415,7 +415,7 @@ export class ShirtSizeComponent implements OnInit {
         fontColor: 'white'
       }
     ];
-    } else if (this.total >= 301) {
+    } else if (this.total >= 281) {
       this.tco.tShirtSizing.CurrentType = 'Extra Large';
       this.tco.tShirtSizing.DurationOfImplementation = '9 - 12 months';
       this.tco['standardImplementation'] = 1400000;
