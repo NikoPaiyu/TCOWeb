@@ -53,7 +53,7 @@ export class ShirtSizeComponent implements OnInit {
         ticks: {
           fontColor: 'white',
           max : 1200000,
-          min: 400000
+          min: 100000
         }
       }]
     }
