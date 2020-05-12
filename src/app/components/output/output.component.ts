@@ -197,10 +197,12 @@ export class OutputComponent implements OnInit {
       backgroundColor: ['#007BFF', '#60c5ba', '#007BFF', '#60c5ba', '#60c5ba']
     }];
 
-  chartLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+  chartLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'];
 
   ngOnInit() {
     this.tco = this.tcoservice.getTCO();
+
+    this.calculateGraph();
   }
 
   goToClient() {
@@ -212,10 +214,87 @@ export class OutputComponent implements OnInit {
   onChartClick(event) {
     console.log(event);
   }
-  // goToOutput(){
-  //   this.route.navigateByUrl('home/output');
-  //   this.local.setProgress('output');
-  // }
+
+  calculateGraph() {
+    if (this.tco.tShirtSizing.CurrentType === 'Small') {
+      this.tco.erpTCOReport.currentSoftwareUpgradeCostPerYer = '$ 1,10,000';
+      this.tco.erpTCOReport.currentHardwareCostPerYear = '$ 1,20,000';
+      this.tco.erpTCOReport.SupportFTEHeadcountCostYear = '$ 1,00,000';
+      this.tco.erpTCOReport.TotalCurrentSpendPerYear = '$ 4,75,000';
+ 
+      this.chartData = [{
+        data: [475000, 475000, 475000, 475000, 475000],
+        label: 'WMS',
+        fontColor: 'white'
+      },
+      {
+        data: [438400, 430400, 362000, 305000, 305000],
+        label: 'Cloud',
+        fontColor: 'white'
+      }
+    ];
+  } else if (this.tco.tShirtSizing.CurrentType === 'Medium') {
+    this.tco.erpTCOReport.currentSoftwareUpgradeCostPerYer = '$ 1,40,000';
+
+    this.tco.erpTCOReport.currentHardwareCostPerYear = '$ 2,50,000';
+
+    this.tco.erpTCOReport.SupportFTEHeadcountCostYear = '$ 1,20,000';
 
 
+    this.tco.erpTCOReport.TotalCurrentSpendPerYear = '$ 6,50,000';
+
+    this.chartData = [{
+      data: [650000, 650000, 650000, 650000, 650000],
+      label: 'WMS',
+      fontColor: 'white'
+    },
+    {
+      data: [550000, 540000, 500500, 430000, 430000],
+      label: 'Cloud',
+      fontColor: 'white'
+    }
+  ];
+} else if (this.tco.tShirtSizing.CurrentType === 'Large') {
+  this.tco.erpTCOReport.currentSoftwareUpgradeCostPerYer = '$ 28,00,000';
+
+  this.tco.erpTCOReport.currentHardwareCostPerYear =  '$ 40,00,000';
+
+  this.tco.erpTCOReport.SupportFTEHeadcountCostYear = '$ 28,00,000';
+
+
+  this.tco.erpTCOReport.TotalCurrentSpendPerYear = '$ 1,10,00,000';
+
+  this.chartData = [{
+    data: [1100000, 1100000, 1100000, 1100000, 1100000],
+    label: 'WMS',
+    fontColor: 'white'
+  },
+  {
+    data: [950000, 940000, 880000, 800000, 800000],
+    label: 'Cloud',
+    fontColor: 'white'
+  }
+];
+} else if (this.tco.tShirtSizing.CurrentType === 'Extra Large') {
+  this.tco.erpTCOReport.currentSoftwareUpgradeCostPerYer = '$ 30,00,000';
+
+  this.tco.erpTCOReport.currentHardwareCostPerYear = '$ 42,00,000';
+
+  this.tco.erpTCOReport.SupportFTEHeadcountCostYear = '$ 54,00,000';
+
+
+  this.tco.erpTCOReport.TotalCurrentSpendPerYear = '$ 1,40,00,000';
+  this.chartData = [{
+    data: [1400000, 1400000, 1400000, 1400000, 1400000],
+    label: 'WMS',
+    fontColor: 'white'
+  },
+  {
+    data: [1150000, 1050000, 1000000, 925000, 925000],
+    label: 'Cloud',
+    fontColor: 'white'
+  }
+];
+}
+ }
 }

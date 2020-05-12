@@ -365,7 +365,7 @@ export class ShirtSizeComponent implements OnInit {
     if (this.total <= 180) {
       this.tco.tShirtSizing.CurrentType = 'Small';
       this.tco.tShirtSizing.DurationOfImplementation = 'upto 3 months';
-      this.tco['standardImplementation'] = 4750000;
+      this.tco['standardImplementation'] = 475000;
       this.tco['factoryImplementation'] = 260000;
 
       this.chartData = [{
