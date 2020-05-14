@@ -1,5 +1,5 @@
 export class BeginPage {
-    public clientName: string = "Amway";
+    public clientName = 'Amway';
     clientUrl: string;
     clientFirstName: string;
     clientLastName: string;
